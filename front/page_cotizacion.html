@@ -65,17 +65,33 @@ jQuery(document).ready(function(){
   //Slider Handle
   $("#ex6").slider();
   $("#ex6").on("slide", function(slideEvt) {
-    $("#ex6SliderVal").text(slideEvt.value);
+    $("#ex6SliderVal").text(slideEvt.value+' meses');
   });
 
-});
-
-jQuery(document).ready(function() {
-  $("#more-products").on('click',function(e){
-    $
-  });
 });
   
+</script>
+
+<script>
+jQuery(document).ready(function(){
+    $("#hide").click(function(){
+        $(".approved").removeClass("appear");
+    });
+    $("#show").click(function(){
+        $(".approved").addClass("appear");
+    });
+});
+</script>
+
+<script>
+  jQuery(document).ready(function() {
+    $('#optionsRadios2').change(function() {
+        if ($(this).prop('checked')) {
+            alert("¿Estás seguro? Te ofrecemos facilidades de arriendo"); //checked
+        }
+        
+    });
+});
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -109,15 +125,15 @@ jQuery(document).ready(function() {
 <nav class="push-nav">
 
   <ul id="menu-menu-principal-1" class="list-unstyled main-menu">
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_ventacontenedor.html">Venta Contenedores</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_arriendocontenedor.html">Arriendo Contenedores</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_contenedorseco.html">Contenedores Secos</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_contenedorrefrigerado.html">Contenedores Refrigerados</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_contenedorespecial.html">Contenedores Especiales</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_modulos.html">Proyectos Modulares</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_cotizacion.html">Cotización</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_quienessomos.html">Acerca de</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_ubicacion">Ubicación</a></li>
+    <li class="menu-item"><a href="page_ventacontenedor.html">Venta Contenedores</a></li>
+    <li class="menu-item"><a href="page_arriendocontenedor.html">Arriendo Contenedores</a></li>
+    <li class="menu-item"><a href="page_contenedorseco.html">Contenedores Secos</a></li>
+    <li class="menu-item"><a href="page_contenedorrefrigerado.html">Contenedores Refrigerados</a></li>
+    <li class="menu-item"><a href="page_contenedorespecial.html">Contenedores Especiales</a></li>
+    <li class="menu-item"><a href="page_modulos.html">Proyectos Modulares</a></li>
+    <li class="menu-item"><a href="page_cotizacion.html">Cotización</a></li>
+    <li class="menu-item"><a href="page_quienessomos.html">Acerca de</a></li>
+    <li class="menu-item"><a href="page_ubicacion">Ubicación</a></li>
   </ul>
 
 </nav>
@@ -172,7 +188,7 @@ jQuery(document).ready(function() {
               </label>
             </div>
         </div>
-
+        <div class="clear miniseparator"></div>
         <div class="col-md-12 add-ingress">
           <span>1</span><p>Ingresa tus Datos Personales</p>
         </div>
@@ -188,7 +204,8 @@ jQuery(document).ready(function() {
             <label for="InputEmpresa">Empresa</label>
             <input type="text" class="form-control" id="InputEmpresa" placeholder="Empresa">
         </div>
-        <div class="col-xs-12 clear separator" style="border-top:1px solid #414141;"></div>
+        <div class="clear miniseparator"></div>
+        <div class="col-xs-12 clear separator" style="border-top: 1px solid #414141; width: 97%; margin: 0px auto; display: block; float: none;"></div>
 
         <div class="col-md-12 add-ingress">
           <span>2</span><p>Seleccione su container</p>
@@ -219,24 +236,60 @@ jQuery(document).ready(function() {
               <option>Modular</option>
           </select>
         </div>
-        <div class="form-group col-md-12">
+
+        <div class="col-md-12">
+          <h3>¿Requiere Despacho?</h3>
+        </div>
+        <div class="col-xs-6 ">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" value="javascript:void(0)" id="show"> Si
+              </label>
+            </div>
+        </div>
+
+        <div class="col-xs-6 ">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" value="javascript:void(0)" id="hide"> No
+              </label>
+            </div>
+        </div>
+        <div class="clear miniseparator"></div>
+        <div class="approved form-group col-md-12">
+          <label>Ingrese Información para despacho</label>
+          <textarea class="form-control" rows="3"></textarea>
+          <div class="clear miniseparator"></div>
+        </div>
+        <div class="clear miniseparator"></div>
+        <div class="clear separator" style="border-top: 1px solid #414141; width: 97%; margin: 0px auto; display: block; float: none;"></div>
+        <div class="form-group col-md-6 col-sm-6 col-xs-12">         
           <label>Seleccione su tiempo de arriendo</label>
           <input id="ex6" type="text" class="col-xs-12" data-slider-min="1" data-slider-max="24" data-slider-step="1" data-slider-value="1"/>
-          <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Semana</span></span>
-        </div>
-        <div class="col-xs-12 clear separator" style="border-top:1px solid #414141;"></div>
+          <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Meses</span></span>
+       
+          <div class="clear separator"></div>
+          <div class="clear separator" style="border-top: 1px solid #414141; width: 97%; margin: 0px auto; display: block; float: none;"></div>
 
-        <div class="col-md-12" id="more-products">
-          <p>Puede revisar nuestro catálogo y seleccionar otros productos a continuación</p>
-          <button class="add-product"><span></span> Agregar más Productos</button>
-        </div>
-        <div class="form-group col-md-12">
+          <div id="more-products">
+            <p>Puede revisar nuestro catálogo y seleccionar otros productos a continuación</p>
+            <button class="add-product"><span></span> Agregar más Productos</button>
+          </div>
+
           <label>Mensaje</label>
           <textarea class="form-control" rows="3"></textarea>
           <div class="clear miniseparator"></div>
           <div class="g-recaptcha" data-sitekey="6LcKyikTAAAAAAnhO53CuhtucI6Ag3CygfA_H5MP"></div>
           <div class="clear miniseparator"></div>
           <button type="submit" class="btn btn-default cta">Enviar Cotización</button>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 explain">
+          <h3>Beneficios de Arrendar</h3>
+          <p><em> Sed et erat sed felis gravida ultricies non at lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed at dolor ac elit fermentum semper a eleifend augue. Nam dictum quis nisl at maximus.</em></p>
+          <p>Nunc lobortis cursus dapibus. Etiam vitae diam luctus, cursus orci eget, dictum quam. Pellentesque a placerat massa. Aenean eu felis nisi. Aliquam erat volutpat. Cras ipsum odio, efficitur quis faucibus nec, tempus vel purus. Maecenas nulla lacus, fermentum in ornare quis, ullamcorper feugiat dolor. Integer magna erat, lobortis non dolor et, luctus aliquam nisi.</p>
+          <p> Sed aliquam elit erat, id rutrum sapien dignissim id. Praesent sit amet justo lobortis, commodo ex quis, porta turpis. Aenean ac tortor lacinia eros sollicitudin semper non et augue. Sed et erat sed felis gravida ultricies non at lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed at dolor ac elit fermentum semper a eleifend augue. Nam dictum quis nisl at maximus. </p>
+          <p>Proin tristique gravida ligula nec viverra. Morbi nec orci velit. Vestibulum suscipit, risus nec molestie commodo, erat ipsum feugiat orci, et volutpat mauris lorem in urna. Pellentesque quis aliquet enim. Maecenas nec nisi nec ante dictum eleifend.</p>
         </div>
 
       </form>

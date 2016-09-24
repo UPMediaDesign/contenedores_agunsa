@@ -65,11 +65,33 @@ jQuery(document).ready(function(){
   //Slider Handle
   $("#ex6").slider();
   $("#ex6").on("slide", function(slideEvt) {
-    $("#ex6SliderVal").text(slideEvt.value);
+    $("#ex6SliderVal").text(slideEvt.value+' meses');
   });
 
 });
   
+</script>
+
+<script>
+jQuery(document).ready(function(){
+    $("#hide").click(function(){
+        $(".approved").removeClass("appear");
+    });
+    $("#show").click(function(){
+        $(".approved").addClass("appear");
+    });
+});
+</script>
+
+<script>
+  jQuery(document).ready(function() {
+    $('#optionsRadios2').change(function() {
+        if ($(this).prop('checked')) {
+            alert("¿Estás seguro? Te ofrecemos facilidades de arriendo"); //checked
+        }
+        
+    });
+});
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -103,19 +125,18 @@ jQuery(document).ready(function(){
 <nav class="push-nav">
 
   <ul id="menu-menu-principal-1" class="list-unstyled main-menu">
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_ventacontenedor.html">Venta Contenedores</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_arriendocontenedor.html">Arriendo Contenedores</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_contenedorseco.html">Contenedores Secos</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_contenedorrefrigerado.html">Contenedores Refrigerados</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_contenedorespecial.html">Contenedores Especiales</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_modulos.html">Proyectos Modulares</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_cotizacion.html">Cotización</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_quienessomos.html">Acerca de</a></li>
-    <li class="menu-item"><a href="http://contenedoresagunsa.upmedia.cl/front/page_ubicacion">Ubicación</a></li>
+    <li class="menu-item"><a href="page_ventacontenedor.html">Venta Contenedores</a></li>
+    <li class="menu-item"><a href="page_arriendocontenedor.html">Arriendo Contenedores</a></li>
+    <li class="menu-item"><a href="page_contenedorseco.html">Contenedores Secos</a></li>
+    <li class="menu-item"><a href="page_contenedorrefrigerado.html">Contenedores Refrigerados</a></li>
+    <li class="menu-item"><a href="page_contenedorespecial.html">Contenedores Especiales</a></li>
+    <li class="menu-item"><a href="page_modulos.html">Proyectos Modulares</a></li>
+    <li class="menu-item"><a href="page_cotizacion.html">Cotización</a></li>
+    <li class="menu-item"><a href="page_quienessomos.html">Acerca de</a></li>
+    <li class="menu-item"><a href="page_ubicacion">Ubicación</a></li>
   </ul>
 
 </nav>
-
 <section class="pre-heading" style="background:url(images/cont_view.jpg);">
   <div class="container">
     <div class="row">
@@ -257,24 +278,24 @@ jQuery(document).ready(function(){
             <p>Nunc mollis tellus et hendrerit consequat. Nam scelerisque luctus laoreet. Pellentesque non consequat sem, eu faucibus nulla. .</p>
             <ul>
               <li>
-                <img src="images/size-icon.png" class="img-responsive"  alt="" />
-                <span>A medida de sus necesidades</span>
+                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+                <span>Resistentes</span>
               </li>
               <li>
-                <img src="images/colors-icon.png" class="img-responsive"  alt="" />
-                <span>Colores Personalizables</span>
+                <img src="images/lego-icon.png" class="img-responsive" alt="" />
+                <span>Apilables</span>
               </li>
               <li>
-                <img src="images/covering-icon.png" class="img-responsive"  alt="" />
-                <span>Revestimiento de suelo</span>
+                <img src="images/transport-icon.png" class="img-responsive" alt="" />
+                <span>Transportables</span>
               </li>
               <li>
-                <img src="images/lock-icon.png" class="img-responsive" alt="" />
-                <span>Cierres de Seguridad</span>
+                <img src="images/drop-icon.png" class="img-responsive"  alt="" />
+                <span>Herméticos</span>
               </li>
               <li>
-                <img src="images/drop-icon.png" class="img-responsive" alt="" />
-                <span>Protección Anti-humedad</span>
+                <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
+                <span>Medidas Internas y Externas</span>
               </li>
             </ul>
             <div class="clear separator"></div>
@@ -289,24 +310,24 @@ jQuery(document).ready(function(){
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
             <ul>
               <li>
-                <img src="images/size-icon.png" class="img-responsive"  alt="" />
-                <span>A medida de sus necesidades</span>
+                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+                <span>Resistentes</span>
               </li>
               <li>
-                <img src="images/colors-icon.png" class="img-responsive"  alt="" />
-                <span>Colores Personalizables</span>
+                <img src="images/lego-icon.png" class="img-responsive" alt="" />
+                <span>Apilables</span>
               </li>
               <li>
-                <img src="images/covering-icon.png" class="img-responsive"  alt="" />
-                <span>Revestimiento de suelo</span>
+                <img src="images/transport-icon.png" class="img-responsive" alt="" />
+                <span>Transportables</span>
               </li>
               <li>
-                <img src="images/lock-icon.png" class="img-responsive" alt="" />
-                <span>Cierres de Seguridad</span>
+                <img src="images/drop-icon.png" class="img-responsive"  alt="" />
+                <span>Herméticos</span>
               </li>
               <li>
-                <img src="images/drop-icon.png" class="img-responsive" alt="" />
-                <span>Protección Anti-humedad</span>
+                <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
+                <span>Medidas Internas y Externas</span>
               </li>
             </ul>
             <div class="clear separator"></div>
@@ -321,24 +342,24 @@ jQuery(document).ready(function(){
             <p>Nunc mollis tellus et hendrerit consequat. Nam scelerisque luctus laoreet. Pellentesque non consequat sem, eu faucibus nulla. </p>
             <ul>
               <li>
-                <img src="images/size-icon.png" class="img-responsive"  alt="" />
-                <span>A medida de sus necesidades</span>
+                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+                <span>Resistentes</span>
               </li>
               <li>
-                <img src="images/colors-icon.png" class="img-responsive"  alt="" />
-                <span>Colores Personalizables</span>
+                <img src="images/lego-icon.png" class="img-responsive" alt="" />
+                <span>Apilables</span>
               </li>
               <li>
-                <img src="images/covering-icon.png" class="img-responsive"  alt="" />
-                <span>Revestimiento de suelo</span>
+                <img src="images/transport-icon.png" class="img-responsive" alt="" />
+                <span>Transportables</span>
               </li>
               <li>
-                <img src="images/lock-icon.png" class="img-responsive" alt="" />
-                <span>Cierres de Seguridad</span>
+                <img src="images/drop-icon.png" class="img-responsive"  alt="" />
+                <span>Herméticos</span>
               </li>
               <li>
-                <img src="images/drop-icon.png" class="img-responsive" alt="" />
-                <span>Protección Anti-humedad</span>
+                <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
+                <span>Medidas Internas y Externas</span>
               </li>
             </ul>
             <div class="clear separator"></div>
@@ -353,24 +374,24 @@ jQuery(document).ready(function(){
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
             <ul>
               <li>
-                <img src="images/size-icon.png" class="img-responsive"  alt="" />
-                <span>A medida de sus necesidades</span>
+                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+                <span>Resistentes</span>
               </li>
               <li>
-                <img src="images/colors-icon.png" class="img-responsive"  alt="" />
-                <span>Colores Personalizables</span>
+                <img src="images/lego-icon.png" class="img-responsive" alt="" />
+                <span>Apilables</span>
               </li>
               <li>
-                <img src="images/covering-icon.png" class="img-responsive"  alt="" />
-                <span>Revestimiento de suelo</span>
+                <img src="images/transport-icon.png" class="img-responsive" alt="" />
+                <span>Transportables</span>
               </li>
               <li>
-                <img src="images/lock-icon.png" class="img-responsive" alt="" />
-                <span>Cierres de Seguridad</span>
+                <img src="images/drop-icon.png" class="img-responsive"  alt="" />
+                <span>Herméticos</span>
               </li>
               <li>
-                <img src="images/drop-icon.png" class="img-responsive" alt="" />
-                <span>Protección Anti-humedad</span>
+                <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
+                <span>Medidas Internas y Externas</span>
               </li>
             </ul>
             <div class="clear separator"></div>
@@ -385,24 +406,24 @@ jQuery(document).ready(function(){
             <p>Nunc mollis tellus et hendrerit consequat. Nam scelerisque luctus laoreet. Pellentesque non consequat sem, eu faucibus nulla. </p>
             <ul>
               <li>
-                <img src="images/size-icon.png" class="img-responsive"  alt="" />
-                <span>A medida de sus necesidades</span>
+                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+                <span>Resistentes</span>
               </li>
               <li>
-                <img src="images/colors-icon.png" class="img-responsive"  alt="" />
-                <span>Colores Personalizables</span>
+                <img src="images/lego-icon.png" class="img-responsive" alt="" />
+                <span>Apilables</span>
               </li>
               <li>
-                <img src="images/covering-icon.png" class="img-responsive"  alt="" />
-                <span>Revestimiento de suelo</span>
+                <img src="images/transport-icon.png" class="img-responsive" alt="" />
+                <span>Transportables</span>
               </li>
               <li>
-                <img src="images/lock-icon.png" class="img-responsive" alt="" />
-                <span>Cierres de Seguridad</span>
+                <img src="images/drop-icon.png" class="img-responsive"  alt="" />
+                <span>Herméticos</span>
               </li>
               <li>
-                <img src="images/drop-icon.png" class="img-responsive" alt="" />
-                <span>Protección Anti-humedad</span>
+                <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
+                <span>Medidas Internas y Externas</span>
               </li>
             </ul>
             <div class="clear separator"></div>
@@ -417,24 +438,24 @@ jQuery(document).ready(function(){
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
             <ul>
               <li>
-                <img src="images/size-icon.png" class="img-responsive"  alt="" />
-                <span>A medida de sus necesidades</span>
+                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+                <span>Resistentes</span>
               </li>
               <li>
-                <img src="images/colors-icon.png" class="img-responsive"  alt="" />
-                <span>Colores Personalizables</span>
+                <img src="images/lego-icon.png" class="img-responsive" alt="" />
+                <span>Apilables</span>
               </li>
               <li>
-                <img src="images/covering-icon.png" class="img-responsive"  alt="" />
-                <span>Revestimiento de suelo</span>
+                <img src="images/transport-icon.png" class="img-responsive" alt="" />
+                <span>Transportables</span>
               </li>
               <li>
-                <img src="images/lock-icon.png" class="img-responsive" alt="" />
-                <span>Cierres de Seguridad</span>
+                <img src="images/drop-icon.png" class="img-responsive"  alt="" />
+                <span>Herméticos</span>
               </li>
               <li>
-                <img src="images/drop-icon.png" class="img-responsive" alt="" />
-                <span>Protección Anti-humedad</span>
+                <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
+                <span>Medidas Internas y Externas</span>
               </li>
             </ul>
             <div class="clear separator"></div>
@@ -449,24 +470,24 @@ jQuery(document).ready(function(){
             <p>Nunc mollis tellus et hendrerit consequat. Nam scelerisque luctus laoreet. Pellentesque non consequat sem, eu faucibus nulla. </p>
             <ul>
               <li>
-                <img src="images/size-icon.png" class="img-responsive"  alt="" />
-                <span>A medida de sus necesidades</span>
+                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+                <span>Resistentes</span>
               </li>
               <li>
-                <img src="images/colors-icon.png" class="img-responsive"  alt="" />
-                <span>Colores Personalizables</span>
+                <img src="images/lego-icon.png" class="img-responsive" alt="" />
+                <span>Apilables</span>
               </li>
               <li>
-                <img src="images/covering-icon.png" class="img-responsive"  alt="" />
-                <span>Revestimiento de suelo</span>
+                <img src="images/transport-icon.png" class="img-responsive" alt="" />
+                <span>Transportables</span>
               </li>
               <li>
-                <img src="images/lock-icon.png" class="img-responsive" alt="" />
-                <span>Cierres de Seguridad</span>
+                <img src="images/drop-icon.png" class="img-responsive"  alt="" />
+                <span>Herméticos</span>
               </li>
               <li>
-                <img src="images/drop-icon.png" class="img-responsive" alt="" />
-                <span>Protección Anti-humedad</span>
+                <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
+                <span>Medidas Internas y Externas</span>
               </li>
             </ul>
             <div class="clear separator"></div>
@@ -481,24 +502,24 @@ jQuery(document).ready(function(){
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
             <ul>
               <li>
-                <img src="images/size-icon.png" class="img-responsive"  alt="" />
-                <span>A medida de sus necesidades</span>
+                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+                <span>Resistentes</span>
               </li>
               <li>
-                <img src="images/colors-icon.png" class="img-responsive"  alt="" />
-                <span>Colores Personalizables</span>
+                <img src="images/lego-icon.png" class="img-responsive" alt="" />
+                <span>Apilables</span>
               </li>
               <li>
-                <img src="images/covering-icon.png" class="img-responsive"  alt="" />
-                <span>Revestimiento de suelo</span>
+                <img src="images/transport-icon.png" class="img-responsive" alt="" />
+                <span>Transportables</span>
               </li>
               <li>
-                <img src="images/lock-icon.png" class="img-responsive" alt="" />
-                <span>Cierres de Seguridad</span>
+                <img src="images/drop-icon.png" class="img-responsive"  alt="" />
+                <span>Herméticos</span>
               </li>
               <li>
-                <img src="images/drop-icon.png" class="img-responsive" alt="" />
-                <span>Protección Anti-humedad</span>
+                <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
+                <span>Medidas Internas y Externas</span>
               </li>
             </ul>
             <div class="clear separator"></div>
@@ -518,6 +539,7 @@ jQuery(document).ready(function(){
     <div class="row area">
 
       <form class="col-md-12 buy-form">
+
         <div class="col-md-12">
           <h3>Envíanos tu requerimiento y te contactaremos</h3>
         </div>
@@ -537,6 +559,7 @@ jQuery(document).ready(function(){
               </label>
             </div>
         </div>
+
         <div class="form-group col-md-3">
             <label for="InputName">Nombre</label>
             <input type="name" class="form-control" id="InputName" placeholder="Nombre">
@@ -575,10 +598,11 @@ jQuery(document).ready(function(){
               <option>Usado</option>
           </select>
         </div>
+
         <div class="form-group col-md-6">
           <label>Seleccione su tiempo de arriendo</label>
           <input id="ex6" type="text" class="col-xs-12" data-slider-min="1" data-slider-max="24" data-slider-step="1" data-slider-value="1"/>
-          <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Semana</span></span>
+          <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Meses</span></span>
         </div>
         <div class="form-group col-md-12">
           <label>Mensaje</label>
@@ -594,6 +618,7 @@ jQuery(document).ready(function(){
     </div>
   </div>
 </section>
+
 
 <div class="callus">
   <div class="container">
