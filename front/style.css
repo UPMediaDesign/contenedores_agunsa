@@ -429,6 +429,105 @@ button.add-product{font-size: 14px; font-weight: 500; -webkit-appearance: button
 .explain h3{font-size:25px; margin-bottom:10px; font-weight: 700; color:#ffffff; margin-top: 5px;}
 .explain p{font-size:14px; line-height:1.4em; font-weight:500; text-align: left; color:#ffffff;}
 
+/*************************************************************************************/
+/******************************** Responsive Styles **********************************/
+/*************************************************************************************/
+
+/* Large desktops and laptops */
+@media (min-width: 1440px){}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width:1440px){}
+
+@media (max-width: 768px) and (orientation: portrait){}
+
+@media (max-width: 768px) and (orientation: landscape){}
+
+/* Landscape tablets and medium desktops */
+@media (max-width: 1280px) and (min-width: 992px){}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px){}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px){}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px){
+/* Home inicial */
+body.home {background-size: 320%; background-position: 50% 0; }
+
+.selection li {padding: 10px 5px; text-align: center; }
+.selection li a {padding: 10px 30px; }
+
+.gocountry h1 {font-size: 20px; }
+.gocountry p {font-size: 12px;}
+
+li.cl {background-position: 15px 14px; background-size: 17px;}
+li.pr {background-position: 15px 14px; background-size: 17px;}
+li.mx {background-position: 15px 14px; background-size: 17px;}
+
+/* Header */
+#nav-expander{right:15px;}
+.navbar.country img, .navbar.contenedor img{max-width:150px;}
+.push-nav{width:100%;}
+.push-nav li a{font-size:20px;}
+
+/* Home Venta - Arriendo */
+.pre-heading h1 {font-size: 23px;}
+
+.tabs h3 {font-size: 16px;}
+
+.container-type li{min-height:150px; border:1px solid #ffffff;}
+.container-type img {width: 100%; max-width: 100px; height: auto; }
+.container-type a {padding: 5px; font-size: 13px; }
+
+.buy-form.quote .area{border:none;}
+.buy-form{padding: 0;}
+
+.offer{padding:0;}
+
+.application figure{margin-bottom:10px;}
+
+/* Venta y Arriendo Contenedores */
+.contenedor .pre-heading{padding-top: 85px; padding-bottom: 85px;}
+.pre-heading p {font-size: 13px;} 
+
+.sale-intro p.pre, .sale-intro p{font-size:14px;}
+.sale-intro h4{ font-size: 18px;}
+
+.mob-slide{padding:0;}
+
+.intro-slide .carousel-caption{padding-top: 10px; padding-bottom: 5px;}
+
+.buy-form h3{text-align:center; font-size: 18px;}
+
+.callus h3 {font-size: 20px;}
+
+.about-cont p{font-size:13px; padding-top:5px;}
+
+.nav-tabs>li{float:none;}
+
+.reference img {width: 100%; height: auto; max-width: 215px; margin: 0 auto; }
+
+.description li {width: 47.5%; float: left; margin-bottom: 20px; }
+
+a.cta {margin: 0 auto; display: block; text-align: center; }
+
+.proyects p{font-size: 14px;}
+
+.cross-tab .nav-tabs>li {float: left; }
+
+.findus p{font-size:13px;}
+
+/* Footer */
+.credits p{font-size:12px;}
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 568px) and (orientation: landscape){}
+
 /* Aquí es donde termina el style y empieza su curiosidad */
 
 
