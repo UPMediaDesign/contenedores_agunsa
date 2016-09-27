@@ -27,6 +27,7 @@
 <!-- scripts -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
 
 jQuery(document).ready(function(){                        
@@ -82,6 +83,70 @@ jQuery(document).ready(function() {
   });
 });
   
+</script>
+
+<script>
+  jQuery(document).ready(function() {
+
+    var marker;
+    var map;
+
+    $("#link1").click(function(){
+        changeMarkerPos(-33.441614, -70.667083);
+    });
+    $("#link2").click(function(){
+        changeMarkerPos(-33.040333, -71.610488);
+    });
+    $("#link3").click(function(){
+      changeMarkerPos(-33.415636, -70.608524);
+    });
+
+    function initialize() {
+        var styles = [{
+            stylers: [{
+                saturation: -100
+            }]
+        }];
+        var styledMap = new google.maps.StyledMapType(styles, {
+            name: "Styled Map"
+        });
+        var mapProp = {
+            center: new google.maps.LatLng(-33.441624, -70.667083),
+            zoom: 17,
+            panControl: false,
+            zoomControl: false,
+            mapTypeControl: false,
+            scaleControl: true,
+            streetViewControl: false,
+            overviewMapControl: false,
+            rotateControl: true,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map_canvas"), mapProp);
+      
+        map.mapTypes.set('map_style', styledMap);
+        map.setMapTypeId('map_style')
+
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(-33.441624, -70.667083),
+            animation: google.maps.Animation.DROP,
+            icon: 'http://contenedoresagunsa.upmedia.cl/front/images/map_area_red.png',
+        });
+      
+        marker.setMap(map);
+        map.panTo(marker.position);
+    }
+
+    function changeMarkerPos(lat, lon){
+        myLatLng = new google.maps.LatLng(lat, lon)
+        marker.setPosition(myLatLng);
+        map.panTo(myLatLng);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+  });
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -177,23 +242,42 @@ jQuery(document).ready(function() {
   </div>
 </section>
 
-<section class="map-area">
+<section class="map-area findus">
   <div class="nocontainer">
     <div class="row">
-      <div class="col-xs-12 col-esp">
-        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13321.18488720468!2d-70.60825622071458!3d-33.41552072123413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6b780bcbb5608698!2ssanta+maria+2800!5e0!3m2!1ses!2scl!4v1473866203277" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen onClick="style.pointerEvents='none'"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="findus">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-        <p>Quisque in facilisis massa. Phasellus molestie finibus arcu et interdum. Duis ac ex auctor, euismod ligula vitae, tincidunt augue. Curabitur dui nibh, dictum id metus nec, bibendum ultrices quam. In non consectetur orci. In leo odio, rutrum et diam vitae, imperdiet blandit enim. Donec non ultricies diam. Aliquam sit amet ex risus. Maecenas vehicula ex non eros ullamcorper aliquet. Pellentesque ex diam, condimentum et porta eget, dapibus fermentum est. Vivamus fringilla, elit ut molestie auctor, nibh augue convallis dolor, sed aliquam urna quam vitae purus. Quisque ut interdum risus. Sed leo sapien, dapibus sed vehicula non, rhoncus quis leo. Fusce molestie lectus a eros consequat, quis bibendum enim fringilla. Praesent et diam euismod, efficitur nunc in, cursus arcu.</p>  
-      </div>
+          <div class="col-sm-12 col-esp">
+            <div id="map_canvas" style="height:250px;"></div>
+          </div>
+
+          <div class="col-sm-8 col-sm-offset-2">
+            <div id="myTab">
+                <a id="link1" href="#office" class="active col-md-4 col-sm-4 col-xs-6">
+                  <img src="images/map_area.png" alt="" />
+                  Sucursal Andres Bello</a>
+
+                <a id="link2" href="#rnd" class="col-md-4 col-sm-4 col-xs-6">
+                  <img src="images/map_area.png" alt="" />
+                  Sucursal Valparaíso</a>
+
+                <a id="link3" href="#map3" class="col-md-4 col-sm-4 col-xs-6">
+                  <img src="images/map_area.png" alt="" />
+                  Sucursal Concepción</a>
+            </div>
+
+            <div class="tab-content">
+              <div class="tab-pane active" id="office">
+                 
+              </div>
+              <div class="tab-pane" id="rnd">
+                 
+              </div>
+              <div class="tab-pane" id="map3">
+                 
+              </div>
+
+            </div>
+          </div>
 
     </div>
   </div>

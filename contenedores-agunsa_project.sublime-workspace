@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"trans",
+				"transparent"
+			],
+			[
+				"change",
+				"changeMarkerPos"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"fi",
+				"findus"
+			],
+			[
+				"f",
+				"ffffff"
+			],
+			[
 				"intro",
 				"intro-slide"
 			],
@@ -26,10 +58,6 @@
 			[
 				"tex",
 				"text-transform"
-			],
-			[
-				"text",
-				"text-align"
 			],
 			[
 				"cont",
@@ -104,10 +132,6 @@
 				"insider-nav"
 			],
 			[
-				"f",
-				"Footer"
-			],
-			[
 				"single",
 				"single-content"
 			],
@@ -138,10 +162,6 @@
 			[
 				"e",
 				"e21717"
-			],
-			[
-				"fi",
-				"figcaption"
 			],
 			[
 				"fig",
@@ -246,10 +266,6 @@
 			[
 				"ble",
 				"blue-girl"
-			],
-			[
-				"margi",
-				"margin-top"
 			],
 			[
 				"pading",
@@ -360,10 +376,6 @@
 				"display"
 			],
 			[
-				"marg",
-				"margin-left"
-			],
-			[
 				"s",
 				"solid"
 			],
@@ -412,26 +424,10 @@
 	"buffers":
 	[
 		{
-			"file": "front/page_contenedorseco.html",
+			"file": "front/page_quienessomos.html",
 			"settings":
 			{
-				"buffer_size": 18409,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/page_contenedorrefrigerado.html",
-			"settings":
-			{
-				"buffer_size": 19061,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/page_cotizacion.html",
-			"settings":
-			{
-				"buffer_size": 9986,
+				"buffer_size": 10703,
 				"line_ending": "Unix"
 			}
 		},
@@ -439,39 +435,7 @@
 			"file": "front/style.css",
 			"settings":
 			{
-				"buffer_size": 23796,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/js/core.js",
-			"settings":
-			{
-				"buffer_size": 60006,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/home_chile.html",
-			"settings":
-			{
-				"buffer_size": 10804,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/page_contenedorespecial.html",
-			"settings":
-			{
-				"buffer_size": 28002,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/page_modulos.html",
-			"settings":
-			{
-				"buffer_size": 13906,
+				"buffer_size": 31965,
 				"line_ending": "Unix"
 			}
 		}
@@ -500,17 +464,17 @@
 	},
 	"file_history":
 	[
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_modulos.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/home_chile.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorespecial.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorrefrigerado.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorseco.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_cotizacion.html",
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_arriendocontenedor.html",
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_ventacontenedor.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_quienessomos.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorespecial.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_cotizacion.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorseco.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorrefrigerado.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/index.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/home_chile.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_modulos.html",
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/js/core.js",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/index.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_quienessomos.html",
 		"/Users/FrontUpmedia/Github/intranet_agunsa/intragunsa/functions.php",
 		"/Users/FrontUpmedia/Github/intranet_agunsa/intragunsa/index.php",
 		"/Users/FrontUpmedia/Github/intranet_agunsa/intragunsa/archive-galeria.php",
@@ -651,6 +615,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"important",
 			"listbox",
 			"active right",
 			"<?php echo get_bloginfo('template_directory')?>/images/0.png",
@@ -777,8 +742,7 @@
 			".donarTweet",
 			"slides-container",
 			"backslides",
-			".contentLeft",
-			".donar"
+			".contentLeft"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -799,23 +763,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "front/page_contenedorseco.html",
+					"file": "front/page_quienessomos.html",
 					"settings":
 					{
-						"buffer_size": 18409,
+						"buffer_size": 10703,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13242,
-								13242
+								4173,
+								4173
 							]
 						],
 						"settings":
@@ -826,65 +790,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5314.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "front/page_contenedorrefrigerado.html",
-					"settings":
-					{
-						"buffer_size": 19061,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								17754,
-								17497
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 6723.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "front/page_cotizacion.html",
-					"settings":
-					{
-						"buffer_size": 9986,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8820,
-								8820
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3549.0,
+						"translation.y": 1641.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -896,19 +802,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "front/style.css",
 					"settings":
 					{
-						"buffer_size": 23796,
+						"buffer_size": 31965,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								21807,
-								21807
+								18800,
+								18800
 							]
 						],
 						"settings":
@@ -920,121 +826,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6218.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "front/js/core.js",
-					"settings":
-					{
-						"buffer_size": 60006,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "front/home_chile.html",
-					"settings":
-					{
-						"buffer_size": 10804,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9902,
-								9902
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 4119.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "front/page_contenedorespecial.html",
-					"settings":
-					{
-						"buffer_size": 28002,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23611,
-								23611
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 8354.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "front/page_modulos.html",
-					"settings":
-					{
-						"buffer_size": 13906,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11425,
-								11425
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4637.0,
+						"translation.y": 5378.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

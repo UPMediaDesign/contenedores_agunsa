@@ -65,11 +65,32 @@ jQuery(document).ready(function(){
   //Slider Handle
   $("#ex6").slider();
   $("#ex6").on("slide", function(slideEvt) {
-    $("#ex6SliderVal").text(slideEvt.value);
+    $("#ex6SliderVal").text(slideEvt.value+' meses');
   });
 
 });
-  
+
+jQuery(document).ready(function(){
+
+    //Requiere Despacho
+    $("#hide").click(function(){
+        $(".approved").removeClass("appear");
+    });
+    $("#show").click(function(){
+        $(".approved").addClass("appear");
+    });
+}); 
+
+jQuery(document).ready(function() {
+
+    //Alert Venta o Arriendo
+    $('#optionsRadios2').change(function() {
+        if ($(this).prop('checked')) {
+            $(".alert").addClass("appear"); //checked
+        }
+        
+    });
+});
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -140,60 +161,69 @@ jQuery(document).ready(function(){
         </div>
       </div>
       
-      <div class="col-md-4 col-sm-12 col-xs-12 intro col-esp">
-        <h2>Modulos</h2>
-        <p>Duis at sem molestie, scelerisque leo vel, blandit velit. Ut tortor ante, interdum sit amet dolor vel, molestie laoreet lectus. Donec et viverra justo. Donec aliquet nulla turpis, quis vulputate nisi fermentum et.</p>
-      </div>
-
-      <div class="col-md-8 col-sm-12 col-xs-12 intro-slide col-esp">
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <ul class="carousel-inner" role="listbox">
-
-            <li class="item active">
-              <img src="images/storage_container.jpg" class="img-responsive" alt="...">
-              <div class="carousel-caption">
-                <h3>Salas de Capacitaciones</h3>
-              </div>
-            </li>
-
-            <li class="item">
-              <img src="images/storage_container.jpg" class="img-responsive" alt="...">
-              <div class="carousel-caption">
-                <h3>Oficinas</h3>
-              </div>
-            </li>
-
-            <li class="item">
-              <img src="images/storage_container.jpg" class="img-responsive" alt="...">
-              <div class="carousel-caption">
-                <h3>Baños</h3>
-              </div>
-            </li>
-
-            <li class="item">
-              <img src="images/storage_container.jpg" class="img-responsive" alt="...">
-              <div class="carousel-caption">
-                <h3>Bodega y Almacenamiento</h3>
-              </div>
-            </li>
-
-          </ul>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-
+      <div class="col-md-4 col-sm-12 col-xs-12 col-esp">
+        <div class="intro">
+          <h2>Modulos</h2>
+          <p>Duis at sem molestie, scelerisque leo vel, blandit velit. Ut tortor ante, interdum sit amet dolor vel, molestie laoreet lectus. fermentum et. Mauris tortor enim, aliquet eu posuere in, auctor ac neque. Aenean fermentum sapien ac mi tincidunt, eget lacinia arcu cursus.</p>
         </div>
       </div>
 
-    </div>
+      <div class="col-md-8 col-sm-12 col-xs-12 mob-slide">
+          <!-- Inicio Slide -->
+          <div class="intro-slide ">
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <ul class="carousel-inner" role="listbox">
+
+                <li class="item active">
+                  <img src="images/cont_500.jpg" class="img-responsive" alt="...">
+                  <div class="carousel-caption">
+                    <h3>Salas de Capacitaciones</h3>
+                  </div>
+                </li>
+
+                <li class="item">
+                  <img src="images/cont_500.jpg" class="img-responsive" alt="...">
+                  <div class="carousel-caption">
+                    <h3>Oficinas</h3>
+                  </div>
+                </li>
+
+                <li class="item">
+                  <img src="images/cont_500.jpg" class="img-responsive" alt="...">
+                  <div class="carousel-caption">
+                    <h3>Baños</h3>
+                  </div>
+                </li>
+
+                <li class="item">
+                  <img src="images/cont_500.jpg" class="img-responsive" alt="...">
+                  <div class="carousel-caption">
+                    <h3>Bodega y Almacenamiento</h3>
+                  </div>
+                </li>
+
+              </ul>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+
+            </div>
+          </div>
+          <!-- Fin Slide -->
+
+        </div>
+        <!-- Fin tab content -->
+      </div>
+
+
   </div>
 </section>
 
@@ -293,21 +323,28 @@ Etiam imperdiet tellus vel nibh gravida blandit</p>
           <h3>Envíanos tu requerimiento y te contactaremos</h3>
         </div>
 
-        <div class="col-xs-6 ">
-            <div class="radio pay">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Arriendo
-              </label>
-            </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="radio pay">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Arriendo
+            </label>
+          </div>
         </div>
 
-        <div class="col-xs-6 ">
-            <div class="radio pay">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Compra
-              </label>
-            </div>
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+          <div class="radio pay">
+            <label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Compra
+            </label>
+          </div>
         </div>
+
+        <div class="col-xs-12">
+          <div class="alert alert-danger" role="alert">
+            <p>Ver beneficios de arrendar</p>
+          </div>
+        </div>
+
         <div class="form-group col-md-3">
             <label for="InputName">Nombre</label>
             <input type="name" class="form-control" id="InputName" placeholder="Nombre">
@@ -328,6 +365,33 @@ Etiam imperdiet tellus vel nibh gravida blandit</p>
               <option>40 Pies</option>
           </select>
         </div>
+
+        <div class="col-md-12">
+          <h3>¿Requiere Despacho?</h3>
+        </div>
+        <div class="col-xs-6 ">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" value="javascript:void(0)" id="show"> Si
+              </label>
+            </div>
+        </div>
+
+        <div class="col-xs-6 ">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" value="javascript:void(0)" id="hide"> No
+              </label>
+            </div>
+        </div>
+
+        <div class="approved form-group col-md-12">
+          <label>Ingrese Información para despacho</label>
+          <textarea class="form-control" rows="3"></textarea>
+          <div class="clear miniseparator"></div>
+        </div>
+        <div class="clear miniseparator"></div>
+
         <!-- Agregar archivos -->
         <div class="form-group col-md-12">
           <label for="InputArchivo" >Ingrese un archivo de planos o estructura de emplazamiento para contenedor seleccionado</label>

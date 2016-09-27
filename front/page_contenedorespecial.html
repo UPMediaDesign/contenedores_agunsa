@@ -87,7 +87,7 @@ jQuery(document).ready(function(){
   jQuery(document).ready(function() {
     $('#optionsRadios2').change(function() {
         if ($(this).prop('checked')) {
-            alert("¿Estás seguro? Te ofrecemos facilidades de arriendo"); //checked
+            $(".alert").addClass("appear"); //checked
         }
         
     });
@@ -125,15 +125,15 @@ jQuery(document).ready(function(){
 <nav class="push-nav">
 
   <ul id="menu-menu-principal-1" class="list-unstyled main-menu">
-    <li class="menu-item"><a href="page_ventacontenedor.html">Venta Contenedores</a></li>
-    <li class="menu-item"><a href="page_arriendocontenedor.html">Arriendo Contenedores</a></li>
-    <li class="menu-item"><a href="page_contenedorseco.html">Contenedores Secos</a></li>
-    <li class="menu-item"><a href="page_contenedorrefrigerado.html">Contenedores Refrigerados</a></li>
-    <li class="menu-item"><a href="page_contenedorespecial.html">Contenedores Especiales</a></li>
-    <li class="menu-item"><a href="page_modulos.html">Proyectos Modulares</a></li>
-    <li class="menu-item"><a href="page_cotizacion.html">Cotización</a></li>
-    <li class="menu-item"><a href="page_quienessomos.html">Acerca de</a></li>
-    <li class="menu-item"><a href="page_ubicacion">Ubicación</a></li>
+    <li class="menu-item "><a href="page_ventacontenedor.html">Venta Contenedores</a></li>
+    <li class="menu-item "><a href="page_arriendocontenedor.html">Arriendo Contenedores</a></li>
+    <li class="menu-item "><a href="page_contenedorseco.html">Contenedores Secos</a></li>
+    <li class="menu-item "><a href="page_contenedorrefrigerado.html">Contenedores Refrigerados</a></li>
+    <li class="menu-item "><a href="page_contenedorespecial.html">Contenedores Especiales</a></li>
+    <li class="menu-item "><a href="page_modulos.html">Proyectos Modulares</a></li>
+    <li class="menu-item "><a href="page_cotizacion.html">Cotización</a></li>
+    <li class="menu-item "><a href="page_quienessomos.html">Acerca de</a></li>
+    <li class="menu-item "><a href="page_ubicacion">Ubicación</a></li>
   </ul>
 
 </nav>
@@ -161,57 +161,13 @@ jQuery(document).ready(function(){
         </div>
       </div>
       
-      <div class="col-md-6 col-sm-12 col-xs-12 intro col-esp" style="min-height: 250px; margin-bottom: 0;">
+      <div class="col-md-4 col-sm-4 col-xs-12 intro col-esp" style="margin-bottom: 0;">
         <h2>Contenedores Especiales</h2>
         <p>Duis at sem molestie, scelerisque leo vel, blandit velit. Ut tortor ante, interdum sit amet dolor vel, molestie laoreet lectus. Donec et viverra justo. Donec aliquet nulla turpis, quis vulputate nisi fermentum et.</p>
       </div>
 
-      <div class="col-md-6 col-sm-12 col-xs-12 intro-slide col-esp">
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <ul class="carousel-inner" role="listbox">
-
-            <li class="item active">
-              <img src="images/cont_size.jpg" class="img-responsive" alt="...">
-              <div class="carousel-caption">
-                <h3>Salas de Capacitaciones</h3>
-              </div>
-            </li>
-
-            <li class="item">
-              <img src="images/cont_size.jpg" class="img-responsive" alt="...">
-              <div class="carousel-caption">
-                <h3>Oficinas</h3>
-              </div>
-            </li>
-
-            <li class="item">
-              <img src="images/cont_size.jpg" class="img-responsive" alt="...">
-              <div class="carousel-caption">
-                <h3>Baños</h3>
-              </div>
-            </li>
-
-            <li class="item">
-              <img src="images/cont_size.jpg" class="img-responsive" alt="...">
-              <div class="carousel-caption">
-                <h3>Bodega y Almacenamiento</h3>
-              </div>
-            </li>
-
-          </ul>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-
-        </div>
+      <div class="col-md-8 col-sm-8 col-xs-12 intro-slide ">
+        <img src="images/cont_220.jpg" class="img-responsive" alt="...">
       </div>
 
     </div>
@@ -266,8 +222,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+ <!--            <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -298,8 +254,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+<!--             <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -330,8 +286,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+<!--             <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -362,8 +318,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+<!--             <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -394,8 +350,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+<!--             <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -426,8 +382,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+<!--             <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -458,8 +414,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+<!--             <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -490,8 +446,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+<!--             <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -522,8 +478,8 @@ jQuery(document).ready(function(){
                 <span>Medidas Internas y Externas</span>
               </li>
             </ul>
-            <div class="clear separator"></div>
-            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a>
+<!--             <div class="clear separator"></div>
+            <a href="/" class="cta" rel="nofollow" title="Descargar Ficha Contenedor">Descargar Ficha Contenedor</a> -->
           </div>
         </div>
 
@@ -533,26 +489,24 @@ jQuery(document).ready(function(){
   </div>
 </section>
 
-
 <section class="buy-form quote">
   <div class="container">
     <div class="row area">
 
-      <form class="col-md-12 buy-form">
-
-        <div class="col-md-12">
+      <form class="col-md-12 col-sm-12 buy-form">
+        <div class="col-md-12 col-sm-12">
           <h3>Envíanos tu requerimiento y te contactaremos</h3>
         </div>
 
-        <div class="col-xs-6 ">
+        <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="radio pay">
               <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Arriendo
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Arriendo
               </label>
             </div>
         </div>
 
-        <div class="col-xs-6 ">
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
             <div class="radio pay">
               <label>
                 <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Compra
@@ -560,19 +514,25 @@ jQuery(document).ready(function(){
             </div>
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="col-xs-12">
+          <div class="alert alert-danger" role="alert">
+            <p>Ver beneficios de arrendar</p>
+          </div>
+        </div>
+
+        <div class="form-group col-md-3 col-sm-3">
             <label for="InputName">Nombre</label>
             <input type="name" class="form-control" id="InputName" placeholder="Nombre">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-3 col-sm-3">
             <label for="InputEmail">Email</label>
             <input type="email" class="form-control" id="InputMail" placeholder="Email">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-3 col-sm-3">
             <label for="InputEmpresa">Empresa</label>
             <input type="text" class="form-control" id="InputEmpresa" placeholder="Empresa">
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-3 col-sm-3">
           <label>Tipo</label>
             <select class="form-control">
               <option>--</option>
@@ -582,7 +542,7 @@ jQuery(document).ready(function(){
               <option>Modular</option>
           </select>
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-3 col-sm-3">
           <label>Tamaño</label>
             <select class="form-control">
               <option>--</option>
@@ -590,7 +550,7 @@ jQuery(document).ready(function(){
               <option>40 Pies</option>
           </select>
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-3 col-sm-3">
           <label>Condición</label>
             <select class="form-control">
               <option>--</option>
@@ -599,11 +559,37 @@ jQuery(document).ready(function(){
           </select>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-6 col-sm-6">
           <label>Seleccione su tiempo de arriendo</label>
           <input id="ex6" type="text" class="col-xs-12" data-slider-min="1" data-slider-max="24" data-slider-step="1" data-slider-value="1"/>
-          <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Meses</span></span>
+          <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Mes</span></span>
         </div>
+
+        <div class="col-md-12">
+          <h3>¿Requiere Despacho?</h3>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" value="javascript:void(0)" id="show"> Si
+              </label>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 ">
+            <div class="radio">
+              <label>
+                <input type="radio" name="optionsRadios" value="javascript:void(0)" id="hide"> No
+              </label>
+            </div>
+        </div>  
+        
+        <div class="approved form-group col-md-12">
+            <label>Ingrese Información para despacho</label>
+            <textarea class="form-control" rows="3"></textarea>
+            <div class="clear miniseparator"></div>
+        </div>      
+
         <div class="form-group col-md-12">
           <label>Mensaje</label>
           <textarea class="form-control" rows="3"></textarea>
@@ -619,11 +605,10 @@ jQuery(document).ready(function(){
   </div>
 </section>
 
-
 <div class="callus">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-esp">
+      <div class="col-xs-12 col-esp liner">
         <h3><span class="fa fa-phone" aria-hidden="true"></span> Llámenos al <strong>224 60 2222</strong></h3>
       </div>
     </div>
@@ -638,10 +623,22 @@ jQuery(document).ready(function(){
         <p>Aenean orci lacus, vehicula sagittis porta non, volutpat ac magna. Aenean sit amet pellentesque arcu. Quisque non tristique libero, non blandit enim. Mauris lobortis fringilla nunc elementum molestie. Nullam cursus urna nisl, id feugiat ante cursus vel. 
 Etiam imperdiet tellus vel nibh gravida blandit</p>
       </div>
-      <div class="col-md-3 col-sm-3 col-xs-6 miniseparator"><img class="img-responsive" src="images/cont-reference_new.jpg" alt="" /></div>
-      <div class="col-md-3 col-sm-3 col-xs-6 miniseparator"><img class="img-responsive" src="images/cont-reference_new.jpg" alt="" /></div>
-      <div class="col-md-3 col-sm-3 col-xs-6 miniseparator"><img class="img-responsive" src="images/cont-reference_new.jpg" alt="" /></div>
-      <div class="col-md-3 col-sm-3 col-xs-6 miniseparator"><img class="img-responsive" src="images/cont-reference_new.jpg" alt="" /></div>
+      <figure class="col-md-3 col-sm-3 col-xs-6 miniseparator">
+        <figcaption class="new">Nuevo</figcaption>
+        <img class="img-responsive" src="images/cont-reference.jpg" alt="" />
+      </figure>
+      <figure class="col-md-3 col-sm-3 col-xs-6 miniseparator">
+        <figcaption class="new">Nuevo</figcaption>
+        <img class="img-responsive" src="images/cont-reference.jpg" alt="" />
+      </figure>
+      <figure class="col-md-3 col-sm-3 col-xs-6 miniseparator">
+        
+        <img class="img-responsive" src="images/cont-reference.jpg" alt="" />
+      </figure>
+      <figure class="col-md-3 col-sm-3 col-xs-6 miniseparator">
+        
+        <img class="img-responsive" src="images/cont-reference.jpg" alt="" />
+      </figure>
     </div>
   </div>
 </section>

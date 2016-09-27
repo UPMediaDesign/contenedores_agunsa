@@ -62,12 +62,30 @@ jQuery(document).ready(function(){
 
 jQuery(document).ready(function(){
 
-	//Slider Handle
-	$("#ex6").slider();
-	$("#ex6").on("slide", function(slideEvt) {
-		$("#ex6SliderVal").text(slideEvt.value);
-	});
+  //Slider Handle
+  $("#ex6").slider();
+  $("#ex6").on("slide", function(slideEvt) {
+    $("#ex6SliderVal").text(slideEvt.value+' meses');
+  });
 
+});
+
+jQuery(document).ready(function() {
+    $('#optionsRadios2').change(function() {
+        if ($(this).prop('checked')) {
+            $(".alert").addClass("appear"); //checked
+        }
+        
+    });
+});
+
+jQuery(document).ready(function(){
+    $("#hide").click(function(){
+        $(".approved").removeClass("appear");
+    });
+    $("#show").click(function(){
+        $(".approved").addClass("appear");
+    });
 });
 	
 </script>
@@ -164,25 +182,32 @@ Aenean vulputate, turpis eget semper ultrices</p>
 		<div class="row area">
 
 			<form class="col-md-6 buy-form">
-				<div class="col-md-12">
-					<h3>Envíanos tu cotización</h3>
-				</div>
-				<div class="form-group col-md-12 col-esp">
-				  	<div class="col-xs-6 ">
-						<div class="radio">
-							<label>
-					    		<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Arriendo
-					  		</label>
-						</div>
-					</div>
-					<div class="col-xs-6 ">
-						<div class="radio">
-							<label>
-				    			<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Compra
-				  			</label>
-						</div>
-					</div>
-				</div>
+		        <div class="col-md-12">
+		          <h3>Envíanos tu requerimiento y te contactaremos</h3>
+		        </div>
+
+		        <div class="col-md-6 col-sm-6 col-xs-12">
+		            <div class="radio pay">
+		              <label>
+		                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"> Arriendo
+		              </label>
+		            </div>
+		        </div>
+
+		        <div class="col-md-6 col-sm-6 col-xs-12 ">
+		            <div class="radio pay">
+		              <label>
+		                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Compra
+		              </label>
+		            </div>
+		        </div>
+
+		        <div class="col-xs-12">
+		          <div class="alert alert-danger" role="alert">
+		            <p>Ver beneficios de arrendar</p>
+		          </div>
+		        </div>
+
 				<div class="form-group col-md-6">
 				    <label for="InputName">Nombre</label>
 				    <input type="name" class="form-control" id="InputName" placeholder="Nombre">
@@ -221,9 +246,35 @@ Aenean vulputate, turpis eget semper ultrices</p>
 					  	<option>Usado</option>
 					</select>
 				</div>
+
+				<div class="col-md-12">
+		          <h3>¿Requiere Despacho?</h3>
+		        </div>
+		        <div class="col-md-6 col-sm-6 col-xs-12 ">
+		            <div class="radio">
+		              <label>
+		                <input type="radio" name="optionsRadios" value="javascript:void(0)" id="show"> Si
+		              </label>
+		            </div>
+		        </div>
+
+		        <div class="col-md-6 col-sm-6 col-xs-12 ">
+		            <div class="radio">
+		              <label>
+		                <input type="radio" name="optionsRadios" value="javascript:void(0)" id="hide"> No
+		              </label>
+		            </div>
+		        </div>
+
+		        <div class="approved form-group col-md-12">
+		          <label>Ingrese Información para despacho</label>
+		          <textarea class="form-control" rows="3"></textarea>
+		          <div class="clear miniseparator"></div>
+		        </div>
+
 				<div class="form-group col-md-12">
 					<input id="ex6" type="text" class="col-xs-12" data-slider-min="1" data-slider-max="24" data-slider-step="1" data-slider-value="1"/>
-					<span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Semana</span></span>
+					<span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Mes</span></span>
 				</div>
 				<div class="form-group col-md-12">
 					<label>Mensaje</label>
@@ -241,23 +292,56 @@ Aenean vulputate, turpis eget semper ultrices</p>
 					<h3>Promociones y Ofertas</h3>
 					<p>Revisa nuestras ofertas disponibles a la fecha</p>
 					<small>Sed sodales sollicitudin ligula, id mollis eros imperdiet at. Morbi sit amet nisl nec enim mollis varius a a quam. </small>
+					<small>Etiam gravida porta lorem finibus dapibus. Suspendisse vitae augue enim. Etiam elementum et sem eget eleifend.</small>
+					<small>Donec rhoncus lacus eu tortor porttitor fringilla in at eros. Cras laoreet lacus sed turpis tincidunt rhoncus. Curabitur vestibulum lectus sed dui accumsan maximus.</small>
+					<small>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla sit amet auctor tortor, eu molestie lorem. Donec rhoncus lacus eu tortor porttitor fringilla in at eros. Cras laoreet lacus sed turpis tincidunt rhoncus. Curabitur vestibulum lectus sed dui accumsan maximus. </small>
 				</div>
-				<div class="col-xs-6 piece">
-					<a href=""><img src="images/ban_10dcto.jpg" alt="" /></a>
-				</div>
-				<div class="col-xs-6 piece">
-					<a href=""><img src="images/ban_2x1.jpg" alt="" /></a>
-				</div>
-				<div class="col-xs-12 piece">
-					<a href=""><img src="images/ban_space.jpg" alt="" /></a>
-				</div>
+
+				<div class="bs-example col-md-12" data-example-id="simple-table"> 
+					<table class="table"> 
+						<thead> 
+							<tr> 
+								<th></th> 
+								<th>Venta</th> 
+								<th>Arriendo</th> 
+							</tr> 
+						</thead> 
+						<tbody> 
+							<tr> 
+								<td>Capital Inmóvil</td> 
+								<td><img src="images/check.png" alt="" /></td> 
+								<td><img src="images/check.png" alt="" /></td> 
+							</tr> 
+							<tr>  
+								<td>Depreciación</td> 
+								<td></td> 
+								<td><img src="images/check.png" alt="" /></td>
+							</tr> 
+							<tr> 
+								<td>Tiempo necesario</td> 
+								<td></td> 
+								<td><img src="images/check.png" alt="" /></td> 
+							</tr> 
+							<tr> 
+								<td>Reparación</td> 
+								<td><img src="images/check.png" alt="" /></td> 
+								<td><img src="images/check.png" alt="" /></td>
+							</tr>
+							<tr> 
+								<td>Opción para proyectos cortos</td> 
+								<td><img src="images/check.png" alt="" /></td> 
+								<td><img src="images/check.png" alt="" /></td> 
+							</tr>
+
+						</tbody> 
+					</table> 
+				</div>	
+
 			</div>
 
 		</div>
 	</div>
 </section>
-
-
 
 <section class="application clr-bg06">
 	<div class="container">
