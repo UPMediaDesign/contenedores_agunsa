@@ -29,7 +29,7 @@
 <!-- scripts -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+
 <script>
 
 jQuery(document).ready(function(){                        
@@ -79,93 +79,15 @@ jQuery(document).ready(function() {
   });
 });
 
-jQuery(document).ready(function() {
+/*jQuery(document).ready(function() {
   $('.maps').click(function () {
     $('.maps iframe').css("pointer-events", "auto");
   });
-});
+});*/
   
 </script>
 
-<script>
-  jQuery(document).ready(function() {
 
-    var marker;
-    var map;
-
-    $("#link1").click(function(){
-        changeMarkerPos(-33.441614, -70.667083);
-    });
-    $("#link2").click(function(){
-        changeMarkerPos(-33.040333, -71.610488);
-    });
-    $("#link3").click(function(){
-      changeMarkerPos(-33.415636, -70.608524);
-    });
-
-    function initialize() {
-        var styles = [
-              {
-                stylers: [
-                  { hue: "#e21717" },
-                  { saturation: -20 }
-                ]
-              },{
-                featureType: "road",
-                elementType: "geometry",
-                stylers: [
-                  { lightness: 100 },
-                  { visibility: "simplified" }
-                ]
-              },{
-                featureType: "road",
-                elementType: "labels",
-                stylers: [
-                  { visibility: "off" }
-                ]
-              }
-            ];
-        var styledMap = new google.maps.StyledMapType(styles, {
-            name: "Styled Map"
-        });
-        var mapProp = {
-            center: new google.maps.LatLng(-33.441624, -70.667083),
-            zoom: 17,
-            panControl: true,
-            zoomControl: true,
-            mapTypeControl: false,
-            scaleControl: true,
-            streetViewControl: false,
-            overviewMapControl: false,
-            rotateControl: true,
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map(document.getElementById("map_canvas"), mapProp);
-      
-        map.mapTypes.set('map_style', styledMap);
-        map.setMapTypeId('map_style')
-
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-33.441624, -70.667083),
-            animation: google.maps.Animation.DROP,
-            icon: 'http://contenedoresagunsa.upmedia.cl/front/images/map_area_red.png',
-        });
-      
-        marker.setMap(map);
-        map.panTo(marker.position);
-    }
-
-    function changeMarkerPos(lat, lon){
-        myLatLng = new google.maps.LatLng(lat, lon)
-        marker.setPosition(myLatLng);
-        map.panTo(myLatLng);
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-    
-  });
-</script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -207,13 +129,13 @@ jQuery(document).ready(function() {
     <li class="menu-item"><a href="page_cotizacion.html">Cotización</a></li>
     <li class="menu-item"><a href="page_quienessomos.html">Acerca de</a></li>
   </ul>
-  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
+  <div class="clear miniseparator liner" style="border-top:1px solid #ab0300;"></div>
   <ul id="menu-menu-principal-2" class="list-unstyled main-menu">
     <li class="cl"><a href="home_chile.html">Chile</a></li>
     <li class="pr"><a href="/">Perú</a></li>
     <li class="mx"><a href="/ml">México</a></li>
   </ul>
-  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
+  <div class="clear miniseparator liner" style="border-top:1px solid #ab0300;"></div>
 
 </nav>
 
@@ -271,36 +193,23 @@ jQuery(document).ready(function() {
     <div class="row">
 
           <div class="col-sm-12 col-esp">
-            <div id="map_canvas" style="height:350px;"></div>
+            <div id="map" style="height:350px;"></div>
           </div>
 
           <div class="col-sm-8 col-sm-offset-2">
-            <div id="myTab">
-                <a id="link1" href="#office" class="active col-md-4 col-sm-4 col-xs-6">
+ 
+            <div id="sucursal-1" class="active col-md-4 col-sm-4 col-xs-6">
                   <img src="images/map_area.png" alt="" />
-                  Sucursal Andres Bello</a>
+                  <span>Sucursal Andres Bello</span></div>
 
-                <a id="link2" href="#rnd" class="col-md-4 col-sm-4 col-xs-6">
+            <div id="sucursal-2" class="col-md-4 col-sm-4 col-xs-6">
                   <img src="images/map_area.png" alt="" />
-                  Sucursal Valparaíso</a>
+                  <span>Sucursal Valparaíso</span></div>
 
-                <a id="link3" href="#map3" class="col-md-4 col-sm-4 col-xs-6">
+            <div id="sucursal-3" class="col-md-4 col-sm-4 col-xs-6">
                   <img src="images/map_area.png" alt="" />
-                  Sucursal Concepción</a>
-            </div>
-
-            <div class="tab-content">
-              <div class="tab-pane active" id="office">
-                 
-              </div>
-              <div class="tab-pane" id="rnd">
-                 
-              </div>
-              <div class="tab-pane" id="map3">
-                 
-              </div>
-
-            </div>
+                  <span>Sucursal Concepción</span></div>
+            
           </div>
 
     </div>
@@ -317,5 +226,121 @@ jQuery(document).ready(function() {
     </div>
 </footer>
 
+
+<script>
+	
+	function initMap() {
+
+	showroom = {lat: -33.405844 , lng: -70.559355 }
+	matriz = {lat: -33.559339 , lng: -70.820190 }
+	vina = {lat: -33.043033 , lng: -71.518191 }
+	
+	shClicker = document.getElementById('sucursal-1');
+	mtClicker = document.getElementById('sucursal-2');
+	vnClicker = document.getElementById('sucursal-3');
+	
+	showroom_info = '<img src="images/logo_red.png" width="120" style="width: 100%; max-width: 140px; margin: 15px auto 0;"><h3 style="margin-top:10px;">ShowRoom</h3>Avenida Las Condes, Las Condes, Región Metropolitana<br><a href="tel:+56223476990" style="color: #e21717; font-weight:500;">(+562) 234 76 990</a><br>Horario: Lun - Vie 9:00 A 18.00<br>Sábado 10:00 a 14.00';
+	
+	matriz_info = '<img src="images/logo_red.png" width="120" style="width: 100%; max-width: 140px; margin: 15px auto 0;"><h3 style="margin-top:10px;">Casa Matriz</h3>Avenida las Industrias 2148, Padre Hurtado, Región Metropolitana<br><a href="tel:+56223476901" style="color: #e21717; font-weight:500;">(+562) 234 76 901</a><br>Horario: Lun - Vie 8:30 A 17:30';
+
+	vina_info = '<img src="images/logo_red.png" width="120" style="width: 100%; max-width: 140px; margin: 15px auto 0;"><h3 style="margin-top:10px;">Concepción</h3>Calle Limache 3363 - Bodega 7 (Sector el Salto), Viña del mar, Region de Valparaíso<br><a href="tel:+56322675873" style="color: #e21717; font-weight:500;">(+5632) 267 58 73</a><br>Horario: Lun - Vie 8:30 A 17:30';
+	
+	// Specify features and elements to define styles.
+	var styleArray = [
+	  {
+		featureType: "all",
+		stylers: [
+		 { saturation: -80 }
+		]
+	  },{
+		featureType: "road.arterial",
+		elementType: "geometry",
+		stylers: [
+		  { hue: "#e21717" },
+		  { saturation: 50 }
+		]
+	  },{
+		featureType: "poi.business",
+		elementType: "labels",
+		stylers: [
+		  { visibility: "off" }
+		]
+	  }
+	];
+
+	// Create a map object and specify the DOM element for display.
+	var map = new google.maps.Map(document.getElementById('map'), {
+	  center: showroom,
+	  scrollwheel: false,
+	  // Apply the map style array to the map.
+	  styles: styleArray,
+	  zoom: 16
+	});
+	
+	var markerShowroom = new google.maps.Marker({
+		position: showroom,
+		map: map,
+		icon : 'images/map_area_red.png',
+		title: 'Showroom'
+	});
+	var markerMatriz = new google.maps.Marker({
+		position: matriz,
+		map: map,
+		title: 'Casa Matriz',
+		icon : 'images/map_area_red.png'
+		
+	});
+	var markerVina = new google.maps.Marker({
+		position: vina,
+		map: map,
+		icon : 'images/map_area_red.png',
+		title: 'Viña del mar'
+	});
+	
+	var infowindowShowroom = new google.maps.InfoWindow({
+		content: showroom_info,
+		maxWidth: 200
+	});
+	
+	var infowindowMatriz = new google.maps.InfoWindow({
+		content: matriz_info,
+		maxWidth: 200
+	});
+	
+	var infowindowVina = new google.maps.InfoWindow({
+		content: vina_info,
+		maxWidth: 200
+	});
+	
+	
+	 markerShowroom.addListener('click', function() {
+	 	infowindowShowroom.open(map, markerShowroom);
+	 });
+	
+	 markerMatriz.addListener('click', function() {
+	 	infowindowMatriz.open(map, markerMatriz);
+	 });
+	
+	 markerVina.addListener('click', function() {
+	 	infowindowVina.open(map, markerVina);
+	 });
+	
+	google.maps.event.addDomListener(shClicker, 'click', function() {
+		map.panTo(showroom);
+		map.setZoom(14);
+	});
+	google.maps.event.addDomListener(mtClicker, 'click', function() {
+		map.panTo(matriz);
+		map.setZoom(14);
+	});
+	google.maps.event.addDomListener(vnClicker, 'click', function() {
+		map.panTo(vina);
+		map.setZoom(14);
+	});
+	
+}
+	
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 </body>
 </html>

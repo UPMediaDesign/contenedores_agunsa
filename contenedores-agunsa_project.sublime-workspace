@@ -431,7 +431,7 @@
 			"file": "front/page_quienessomos.html",
 			"settings":
 			{
-				"buffer_size": 11267,
+				"buffer_size": 12461,
 				"line_ending": "Unix"
 			}
 		},
@@ -439,7 +439,7 @@
 			"file": "front/home_chile.html",
 			"settings":
 			{
-				"buffer_size": 14223,
+				"buffer_size": 14902,
 				"line_ending": "Unix"
 			}
 		},
@@ -447,47 +447,7 @@
 			"file": "front/page_arriendocontenedor.html",
 			"settings":
 			{
-				"buffer_size": 9042,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/page_ventacontenedor.html",
-			"settings":
-			{
-				"buffer_size": 8987,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/index.html",
-			"settings":
-			{
-				"buffer_size": 2405,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/style.css",
-			"settings":
-			{
-				"buffer_size": 33815,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/page_contenedorseco.html",
-			"settings":
-			{
-				"buffer_size": 21226,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "front/page_cotizacion.html",
-			"settings":
-			{
-				"buffer_size": 14045,
+				"buffer_size": 9442,
 				"line_ending": "Unix"
 			}
 		},
@@ -495,27 +455,7 @@
 			"file": "front/page_contenedorespecial.html",
 			"settings":
 			{
-				"buffer_size": 31647,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "function initMap() {\n\n	showroom = {lat: -33.405844 , lng: -70.559355 }\n	matriz = {lat: -33.559339 , lng: -70.820190 }\n	vina = {lat: -33.043033 , lng: -71.518191 }\n	\n	shClicker = document.getElementById('showroom');\n	mtClicker = document.getElementById('matriz');\n	vnClicker = document.getElementById('vina');\n	\n	showroom_info = '<img src=\"http://store.phglass.cl/wp-content/themes/ph/images/logo.png\" width=\"120\"><h3>ShowRoom</h3>Avenida Las Condes, Las Condes, Región Metropolitana<br><a href=\"tel:+56223476990\">(+562) 234 76 990</a><br>Horario: Lun - Vie 9:00 A 18.00<br>Sábado 10:00 a 14.00';\n	\n	matriz_info = '<img src=\"http://store.phglass.cl/wp-content/themes/ph/images/logo.png\" width=\"120\"><h3>Casa Matriz</h3>Avenida las Industrias 2148, Padre Hurtado, Región Metropolitana<br><a href=\"tel:+56223476901\">(+562) 234 76 901</a><br>Horario: Lun - Vie 8:30 A 17:30';\n	vina_info = '<img src=\"http://store.phglass.cl/wp-content/themes/ph/images/logo.png\" width=\"120\"><h3>Viña del mar</h3>Calle Limache 3363 - Bodega 7 (Sector el Salto), Viña del mar, Region de Valparaíso<br><a href=\"tel:+56322675873\">(+5632) 267 58 73</a><br>Horario: Lun - Vie 8:30 A 17:30';\n	\n	// Specify features and elements to define styles.\n	var styleArray = [\n	  {\n		featureType: \"all\",\n		stylers: [\n		 { saturation: -80 }\n		]\n	  },{\n		featureType: \"road.arterial\",\n		elementType: \"geometry\",\n		stylers: [\n		  { hue: \"#00ffee\" },\n		  { saturation: 50 }\n		]\n	  },{\n		featureType: \"poi.business\",\n		elementType: \"labels\",\n		stylers: [\n		  { visibility: \"off\" }\n		]\n	  }\n	];\n\n	// Create a map object and specify the DOM element for display.\n	var map = new google.maps.Map(document.getElementById('map'), {\n	  center: showroom,\n	  scrollwheel: false,\n	  // Apply the map style array to the map.\n	  styles: styleArray,\n	  zoom: 16\n	});\n	\n	var markerShowroom = new google.maps.Marker({\n		position: showroom,\n		map: map,\n		icon : 'http://store.phglass.cl/wp-content/themes/ph/images/pin.png',\n		title: 'Showroom'\n	});\n	var markerMatriz = new google.maps.Marker({\n		position: matriz,\n		map: map,\n		title: 'Casa Matriz',\n		icon : 'http://store.phglass.cl/wp-content/themes/ph/images/pin.png'\n		\n	});\n	var markerVina = new google.maps.Marker({\n		position: vina,\n		map: map,\n		icon : 'http://store.phglass.cl/wp-content/themes/ph/images/pin.png',\n		title: 'Viña del mar'\n	});\n	\n	var infowindowShowroom = new google.maps.InfoWindow({\n		content: showroom_info,\n		maxWidth: 200\n	});\n	\n	var infowindowMatriz = new google.maps.InfoWindow({\n		content: matriz_info,\n		maxWidth: 200\n	});\n	\n	var infowindowVina = new google.maps.InfoWindow({\n		content: vina_info,\n		maxWidth: 200\n	});\n	\n	\n	 markerShowroom.addListener('click', function() {\n	 	infowindowShowroom.open(map, markerShowroom);\n	 });\n	\n	 markerMatriz.addListener('click', function() {\n	 	infowindowMatriz.open(map, markerMatriz);\n	 });\n	\n	 markerVina.addListener('click', function() {\n	 	infowindowVina.open(map, markerVina);\n	 });\n	\n	google.maps.event.addDomListener(shClicker, 'click', function() {\n		map.panTo(showroom);\n		map.setZoom(14);\n	});\n	google.maps.event.addDomListener(mtClicker, 'click', function() {\n		map.panTo(matriz);\n		map.setZoom(14);\n	});\n	google.maps.event.addDomListener(vnClicker, 'click', function() {\n		map.panTo(vina);\n		map.setZoom(14);\n	});\n	\n}\n\n\n\n",
-			"settings":
-			{
-				"buffer_size": 3296,
-				"line_ending": "Unix",
-				"name": "function initMap() {"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:fb=\"http://ogp.me/ns/fb#\">\n<head>\n\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n\n<title>AGUNSA Contenedores - CHILE</title>\n\n\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=0.75 , minimum-scale=1.0 ,  maximum-scale=1.0\">\n\n<link rel=\"shortcut icon\" href=\"favicon.ico?ver=3.8.1\">\n\n<link rel=\"profile\" href=\"http://gmpg.org/xfn/11\" />\n<link rel=\"pingback\" href=\"<?php bloginfo( 'pingback_url' ); ?>\" />\n\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css?ver=3.8.1\">\n<link rel=\"stylesheet\" href=\"style.css?ver=3.8.1\" />\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.css\" />\n<link href=\"https://fonts.googleapis.com/css?family=Exo+2:600,700,800,900\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500\" rel=\"stylesheet\">\n\n<!-- Otros -->\n<script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-1.10.0.min.js?ver=4.5.3\"></script>\n<script type=\"text/javascript\" src=\"js/core.js?ver=4.5.3\"></script>\n\n<!-- scripts -->\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.min.js\"></script>\n<script>\n\njQuery(document).ready(function(){                        \n       \n  //Navigation Menu Slider\n  $('#nav-expander').on('click',function(e){\n    e.preventDefault();\n    $('body').toggleClass('nav-expanded');\n  });\n  $('#nav-close').on('click',function(e){\n    e.preventDefault();\n    $('body').removeClass('nav-expanded');\n  });\n        \n  $(\".main-menu\").navgoco({\n      caret: '<span class=\"caret\"></span>',\n      accordion: false,\n      openClass: 'open',\n      save: true,\n      cookie: {\n          name: 'navgoco',\n          expires: false,\n          path: '/'\n      },\n      slide: {\n          duration: 300,\n          easing: 'swing'\n      }\n  });\n  \n          \n});\n\njQuery(document).ready(function(){\n\n  //Slider Handle\n  $(\"#ex6\").slider();\n  $(\"#ex6\").on(\"slide\", function(slideEvt) {\n    $(\"#ex6SliderVal\").text(slideEvt.value+' meses');\n  });\n\n});\n\njQuery(document).ready(function(){\n\n    //Requiere Despacho\n    $(\"#hide\").click(function(){\n        $(\".approved\").removeClass(\"appear\");\n    });\n    $(\"#show\").click(function(){\n        $(\".approved\").addClass(\"appear\");\n    });\n}); \n\njQuery(document).ready(function(){\n  $(\"#optionsRadios1\").click(function(){\n        $(\".alert\").removeClass(\"appear\");\n    });\n    $(\"#optionsRadios2\").click(function(){\n        $(\".alert\").addClass(\"appear\");\n    });\n});\n\njQuery(document).ready(function(){\n  $(\"#optionsRadios1\").click(function(){\n        $(\".arriendo\").addClass(\"appear\");\n    });\n    $(\"#optionsRadios2\").click(function(){\n        $(\".arriendo\").removeClass(\"appear\");\n    });\n});\n\njQuery(document).ready(function(){\n  var pageX, pageY;\n\n    $(document).mousemove(\n        function(e){\n            pageX = e.pageX;\n            pageY = e.pageY;\n        });\n\n    $('.tooltipped li[title]').hover(\n        function(){\n            var tip = $('<div />')\n                .addClass('tooltip')\n                .text($(this).attr('title'))\n                .css({\n                    'position' : 'absolute',\n                    'top' : pageY,\n                    'left' : pageX\n                });\n            $(tip).appendTo($(this));\n            $(this).mousemove(\n                function(){\n                    $('.tooltip').css(\n                        {\n                            'top' : pageY,\n                            'left' : pageX\n                        });\n                });\n        },\n        function(){\n            $('.tooltip').remove();\n    });\n});\n\n</script>\n\n<script src='https://www.google.com/recaptcha/api.js'></script>\n\n</head>\n\n<body class=\"contenedor\">\n\n<nav class=\"navbar navbar-fixed-top insider-nav contenedor\" role=\"navigation\">\n  <div class=\"container\">\n        <div class=\"row\">\n\n      <div class=\"col-lg-12 col-md-12 col-sm-12\">\n        <a href=\"http://contenedoresagunsa.upmedia.cl/front/\"><img src=\"images/logo_white.png\" alt=\"\" /></a>\n\n      </div>\n\n    </div>\n  </div>\n</nav>\n\n<!-- Push navigation -->\n<div class=\"pull-right\">\n  <a id=\"nav-expander\" class=\"nav-expander fixed\">\n    <span class=\"fa fa-times\" aria-hidden=\"true\"></span>\n    <span class=\"fa fa-bars\" aria-hidden=\"true\"></span>\n  </a>\n</div>\n<!-- Fin Push Navigation -->\n\n<nav class=\"push-nav\">\n\n  <ul id=\"menu-menu-principal-1\" class=\"list-unstyled main-menu\">\n    <li class=\"menu-item\"><a href=\"page_ventacontenedor.html\">Venta Contenedores</a></li>\n    <li class=\"menu-item\"><a href=\"page_arriendocontenedor.html\">Arriendo Contenedores</a></li>\n    <li class=\"menu-item\"><a href=\"page_contenedorseco.html\">Contenedores Secos</a></li>\n    <li class=\"menu-item\"><a href=\"page_contenedorrefrigerado.html\">Contenedores Refrigerados</a></li>\n    <li class=\"menu-item\"><a href=\"page_contenedorespecial.html\">Contenedores Especiales</a></li>\n    <li class=\"menu-item\"><a href=\"page_modulos.html\">Proyectos Modulares</a></li>\n    <li class=\"menu-item\"><a href=\"page_cotizacion.html\">Cotización</a></li>\n    <li class=\"menu-item\"><a href=\"page_quienessomos.html\">Acerca de</a></li>\n    <li class=\"menu-item\"><a href=\"page_ubicacion\">Ubicación</a></li>\n  </ul>\n\n</nav>\n\n<section class=\"pre-heading\" style=\"background:url(images/cont_view.jpg);\">\n  <div class=\"container\">\n    <div class=\"row\">\n      \n      <div class=\"col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6 col-xs-12\">\n        <h1>Modulos</h1>\n        <p>Los contenedores secos o Dry son una excelente solución para el almacenamiento de carga seca</p>\n      </div>\n\n    </div>\n  </div>\n</section>\n\n<!-- Intro Contenedores + Slider -->\n<section class=\"about-cont\">\n  <div class=\"container\">\n    <div class=\"row\">\n\n      <div class=\"col-xs-12 col-esp\">\n        <div class=\"breadcrumb\">\n          <a href=\"http://contenedoresagunsa.upmedia.cl/front/\">Home » </a><a href=\"http://contenedoresagunsa.upmedia.cl/front/home_chile.html\">Contenedores</a> » <strong>Modulos</strong>\n        </div>\n      </div>\n      \n      <div class=\"col-md-4 col-sm-12 col-xs-12 col-esp\">\n        <div class=\"intro\">\n          <h2>Modulos</h2>\n          <p>Duis at sem molestie, scelerisque leo vel, blandit velit. Ut tortor ante, interdum sit amet dolor vel, molestie laoreet lectus. fermentum et. Mauris tortor enim, aliquet eu posuere in, auctor ac neque. Aenean fermentum sapien ac mi tincidunt, eget lacinia arcu cursus.</p>\n        </div>\n      </div>\n\n      <div class=\"col-md-8 col-sm-12 col-xs-12 mob-slide\">\n          <!-- Inicio Slide -->\n          <div class=\"intro-slide \">\n\n            <div id=\"carousel-example-generic\" class=\"carousel slide\" data-ride=\"carousel\">\n              <ul class=\"carousel-inner\" role=\"listbox\">\n\n                <li class=\"item active\">\n                  <img src=\"images/cont_500.jpg\" class=\"img-responsive\" alt=\"...\">\n                  <div class=\"carousel-caption\">\n                    <h3>Salas de Capacitaciones</h3>\n                  </div>\n                </li>\n\n                <li class=\"item\">\n                  <img src=\"images/cont_500.jpg\" class=\"img-responsive\" alt=\"...\">\n                  <div class=\"carousel-caption\">\n                    <h3>Oficinas</h3>\n                  </div>\n                </li>\n\n                <li class=\"item\">\n                  <img src=\"images/cont_500.jpg\" class=\"img-responsive\" alt=\"...\">\n                  <div class=\"carousel-caption\">\n                    <h3>Baños</h3>\n                  </div>\n                </li>\n\n                <li class=\"item\">\n                  <img src=\"images/cont_500.jpg\" class=\"img-responsive\" alt=\"...\">\n                  <div class=\"carousel-caption\">\n                    <h3>Bodega y Almacenamiento</h3>\n                  </div>\n                </li>\n\n              </ul>\n\n              <!-- Controls -->\n              <a class=\"left carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"prev\">\n                <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n                <span class=\"sr-only\">Previous</span>\n              </a>\n              <a class=\"right carousel-control\" href=\"#carousel-example-generic\" role=\"button\" data-slide=\"next\">\n                <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n                <span class=\"sr-only\">Next</span>\n              </a>\n\n            </div>\n          </div>\n          <!-- Fin Slide -->\n\n        </div>\n        <!-- Fin tab content -->\n      </div>\n\n\n  </div>\n</section>\n\n<section class=\"cont-tab\">\n  <div class=\"container\">\n    <div class=\"row\">\n      \n       <!-- Nav tabs -->\n      <ul class=\"nav nav-tabs\" role=\"tablist\">\n        <li role=\"presentation\" class=\"active col-md-6 col-esp\"><a href=\"#20high\" aria-controls=\"40high\" role=\"tab\" data-toggle=\"tab\">Proyectos Especiales</a></li>\n      </ul>\n\n      <!-- Tab panes -->\n      <div class=\"tab-content\">\n        <div role=\"tabpanel\" class=\"tab-pane active\" id=\"40high\">\n          <div class=\"col-md-4 reference\">\n            <img src=\"images/cont-example.jpg\" class=\"img-responsive\" alt=\"\" />\n          </div>\n          <div class=\"col-md-8 description\">\n            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>\n            <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>\n            <ul class=\"tooltiped\">\n              <li title=\"Resistentes a la humedad y el frío\">\n                <img src=\"images/shield-icon.png\" class=\"img-responsive\"  alt=\"\" />\n                <span>Resistentes</span>\n              </li>\n              <li title=\"Estructuras Apilables a sus necesidades\">\n                <img src=\"images/lego-icon.png\" class=\"img-responsive\" alt=\"\" />\n                <span>Apilables</span>\n              </li>\n              <li title=\"Con facilidades de transporte por vías aerea, terrestre y marítima\">\n                <img src=\"images/transport-icon.png\" class=\"img-responsive\" alt=\"\" />\n                <span>Transportables</span>\n              </li>\n              <li title=\"Sellados para conservar tus productos a toda prueba\">\n                <img src=\"images/drop-icon.png\" class=\"img-responsive\"  alt=\"\" />\n                <span>Herméticos</span>\n              </li>\n              <li title=\"Medidas a selección de tus necesidades\">\n                <img src=\"images/tablesize-icon.png\" class=\"img-responsive\"  alt=\"\" />\n                <span>Medidas Internas y Externas</span>\n              </li>\n            </ul>\n            <div class=\"clear separator\"></div>\n            <a href=\"/\" class=\"cta\" rel=\"nofollow\" title=\"Descargar Ficha Contenedor\">Descargar Ficha Contenedor</a>\n          </div>\n        </div>\n\n      </div>\n\n    </div>\n  </div>\n</section>\n\n<section class=\"application clr-bg06\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-lg-12 col-md-12 col-sm-12\">\n        <h3>Galería de Aplicaciones</h3>\n        <p>Aenean orci lacus, vehicula sagittis porta non, volutpat ac magna. Aenean sit amet pellentesque arcu. Quisque non tristique libero, non blandit enim. Mauris lobortis fringilla nunc elementum molestie. Nullam cursus urna nisl, id feugiat ante cursus vel. \nEtiam imperdiet tellus vel nibh gravida blandit</p>\n      </div>\n      <figure class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">\n        <img src=\"images/oficinas.jpg\" alt=\"\" />\n        <figcaption>\n          <h2>Oficinas</h2>\n          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>\n          <a href=\"\">Ver mas <span class=\"fa fa-arrow-right\" aria-hidden=\"true\"></span></a>\n        </figcaption>\n      </figure>\n      <figure class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">\n        <img src=\"images/banos.jpg\" alt=\"\" />\n        <figcaption>\n          <h2>Baños</h2>\n          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>\n          <a href=\"\">Ver mas <span class=\"fa fa-arrow-right\" aria-hidden=\"true\"></span></a>\n        </figcaption>\n      </figure>\n      <figure class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">\n        <img src=\"images/bodega.jpg\" alt=\"\" />\n        <figcaption>\n          <h2>Bodegas y Almacenamiento</h2>\n          <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>\n          <a href=\"\">Ver mas <span class=\"fa fa-arrow-right\" aria-hidden=\"true\"></span></a>\n        </figcaption>\n      </figure>\n    </div>\n  </div>\n</section>\n\n<section class=\"buy-form quote\">\n  <div class=\"container\">\n    <div class=\"row area\">\n\n      <form class=\"col-md-12 buy-form\">\n        <div class=\"col-md-12\">\n          <h3>Envíanos tu requerimiento y te contactaremos</h3>\n        </div>\n\n        <div class=\"col-md-6 col-sm-6 col-xs-12\">\n          <div class=\"radio pay\">\n            <label>\n              <input type=\"radio\" name=\"optionsRadios\" id=\"optionsRadios1\" value=\"option1\"> Arriendo\n            </label>\n          </div>\n        </div>\n\n        <div class=\"col-md-6 col-sm-6 col-xs-12 \">\n          <div class=\"radio pay\">\n            <label>\n              <input type=\"radio\" name=\"optionsRadios\" id=\"optionsRadios2\" value=\"option2\"> Compra\n            </label>\n          </div>\n        </div>\n\n        <div class=\"col-xs-12\">\n          <div class=\"alert alert-danger\" role=\"alert\">\n            <p>Ver beneficios de arrendar</p>\n          </div>\n        </div>\n\n        <div class=\"form-group col-md-3\">\n            <label for=\"InputName\">Nombre</label>\n            <input type=\"name\" class=\"form-control\" id=\"InputName\" placeholder=\"Nombre\">\n        </div>\n        <div class=\"form-group col-md-3\">\n            <label for=\"InputEmail\">Email</label>\n            <input type=\"email\" class=\"form-control\" id=\"InputMail\" placeholder=\"Email\">\n        </div>\n        <div class=\"form-group col-md-3\">\n            <label for=\"InputEmpresa\">Empresa</label>\n            <input type=\"text\" class=\"form-control\" id=\"InputEmpresa\" placeholder=\"Empresa\">\n        </div>\n        <div class=\"form-group col-md-3\">\n          <label>Tamaño</label>\n            <select class=\"form-control\">\n              <option>--</option>\n              <option>20 Pies</option>\n              <option>40 Pies</option>\n          </select>\n        </div>\n\n        <div class=\"form-group col-md-12 col-sm-12 arriendo\">\n          <label>Seleccione su tiempo de arriendo</label>\n          <input id=\"ex6\" type=\"text\" class=\"col-xs-12\" data-slider-min=\"1\" data-slider-max=\"24\" data-slider-step=\"1\" data-slider-value=\"1\"/>\n          <span id=\"ex6CurrentSliderValLabel\"><span id=\"ex6SliderVal\">1 Mes</span></span>\n        </div>\n\n        <div class=\"col-md-12\">\n          <h3>¿Requiere Despacho?</h3>\n        </div>\n        <div class=\"col-xs-6 \">\n            <div class=\"radio\">\n              <label>\n                <input type=\"radio\" name=\"optionsRadios\" value=\"javascript:void(0)\" id=\"show\"> Si\n              </label>\n            </div>\n        </div>\n\n        <div class=\"col-xs-6 \">\n            <div class=\"radio\">\n              <label>\n                <input type=\"radio\" name=\"optionsRadios\" value=\"javascript:void(0)\" id=\"hide\"> No\n              </label>\n            </div>\n        </div>\n\n        <div class=\"approved form-group col-md-12\">\n          <label>Ingrese Información para despacho</label>\n          <textarea class=\"form-control\" rows=\"3\"></textarea>\n          <div class=\"clear miniseparator\"></div>\n        </div>\n        <div class=\"clear miniseparator\"></div>\n\n        <!-- Agregar archivos -->\n        <div class=\"form-group col-md-12\">\n          <label for=\"InputArchivo\" >Ingrese un archivo de planos o estructura de emplazamiento para contenedor seleccionado</label>\n          <input type=\"file\" class=\"send-file\" placeholder=\"Seleccione un Archivo\">\n        </div>\n        <div class=\"form-group col-md-12\">\n          <label>Descripción de Requerimiento</label>\n          <textarea class=\"form-control\" rows=\"3\"></textarea>\n          <div class=\"clear miniseparator\"></div>\n          <div class=\"g-recaptcha\" data-sitekey=\"6LcKyikTAAAAAAnhO53CuhtucI6Ag3CygfA_H5MP\"></div>\n          <div class=\"clear miniseparator\"></div>\n          <button type=\"submit\" class=\"btn btn-default cta\">Enviar Cotización</button>\n        </div>\n\n      </form>\n\n    </div>\n  </div>\n</section>\n\n<div class=\"callus\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-xs-12 col-esp\">\n        <h3><span class=\"fa fa-phone\" aria-hidden=\"true\"></span> Llámenos al <strong>224 60 2222</strong></h3>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n<footer class=\"clr-bg01 credits\">\n  <div class=\"megacontainer\">\n      <div class=\"row\">\n\n      <p>Agencias Universales S.A. Av. Andrés Bello 2687, piso 15, Las Condes, Santiago de Chile - Fono Central: <a href=\"callto:(+56 2) 2460 2700 \" class=\"tel-foot\" title=\"Llamar a Mesa Central Agunsa\" rel=\"\"></a></p>      \n\n        </div>\n    </div>\n</footer>\n\n</body>\n</html>",
-			"file": "front/page_modulos.html",
-			"file_size": 17459,
-			"file_write_time": 1475088486000000,
-			"settings":
-			{
-				"buffer_size": 17515,
+				"buffer_size": 32238,
 				"line_ending": "Unix"
 			}
 		},
@@ -523,7 +463,47 @@
 			"file": "front/page_contenedorrefrigerado.html",
 			"settings":
 			{
-				"buffer_size": 23008,
+				"buffer_size": 23612,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/page_contenedorseco.html",
+			"settings":
+			{
+				"buffer_size": 21832,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/page_cotizacion.html",
+			"settings":
+			{
+				"buffer_size": 14514,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/page_modulos.html",
+			"settings":
+			{
+				"buffer_size": 18155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/page_ventacontenedor.html",
+			"settings":
+			{
+				"buffer_size": 9386,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "front/style.css",
+			"settings":
+			{
+				"buffer_size": 34507,
 				"line_ending": "Unix"
 			}
 		}
@@ -554,15 +534,15 @@
 	[
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_modulos.html",
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorrefrigerado.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/home_chile.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_ventacontenedor.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_arriendocontenedor.html",
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorespecial.html",
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_contenedorseco.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/home_chile.html",
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_cotizacion.html",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/js/core.js",
-		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/index.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_ventacontenedor.html",
 		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_quienessomos.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/page_arriendocontenedor.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/index.html",
+		"/Users/FrontUpmedia/Github/contenedores_agunsa/front/js/core.js",
 		"/Users/FrontUpmedia/Github/intranet_agunsa/intragunsa/functions.php",
 		"/Users/FrontUpmedia/Github/intranet_agunsa/intragunsa/index.php",
 		"/Users/FrontUpmedia/Github/intranet_agunsa/intragunsa/archive-galeria.php",
@@ -703,6 +683,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			", ",
 			"arriendo",
 			"sale",
 			"important",
@@ -829,8 +810,7 @@
 			".lacampana p",
 			"#backslides",
 			"frameVideo",
-			".donarTweet",
-			"slides-container"
+			".donarTweet"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -851,7 +831,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -859,15 +839,15 @@
 					"file": "front/page_quienessomos.html",
 					"settings":
 					{
-						"buffer_size": 11267,
+						"buffer_size": 12461,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1014,
-								1209
+								4650,
+								4251
 							]
 						],
 						"settings":
@@ -878,7 +858,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1605.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -888,15 +868,15 @@
 					"file": "front/home_chile.html",
 					"settings":
 					{
-						"buffer_size": 14223,
+						"buffer_size": 14902,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3841,
-								3841
+								5049,
+								5049
 							]
 						],
 						"settings":
@@ -905,7 +885,7 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1779.0,
+						"translation.y": 1602.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -915,15 +895,15 @@
 					"file": "front/page_arriendocontenedor.html",
 					"settings":
 					{
-						"buffer_size": 9042,
+						"buffer_size": 9442,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1201,
-								1201
+								4501,
+								4501
 							]
 						],
 						"settings":
@@ -934,25 +914,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1635.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "front/page_ventacontenedor.html",
+					"file": "front/page_contenedorespecial.html",
 					"settings":
 					{
-						"buffer_size": 8987,
+						"buffer_size": 32238,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1201,
-								1201
+								5980,
+								5980
 							]
 						],
 						"settings":
@@ -963,35 +943,152 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2350.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "front/index.html",
+					"file": "front/page_contenedorrefrigerado.html",
 					"settings":
 					{
-						"buffer_size": 2405,
+						"buffer_size": 23612,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								5958,
+								5958
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 269.0,
+						"translation.y": 2272.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "front/page_contenedorseco.html",
+					"settings":
+					{
+						"buffer_size": 21832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5960,
+								5960
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2424.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "front/page_cotizacion.html",
+					"settings":
+					{
+						"buffer_size": 14514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5961,
+								5961
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2417.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "front/page_modulos.html",
+					"settings":
+					{
+						"buffer_size": 18155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5982,
+								5982
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2342.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "front/page_ventacontenedor.html",
+					"settings":
+					{
+						"buffer_size": 9386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4501,
+								4501
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1554.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1003,19 +1100,19 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
+					"buffer": 9,
 					"file": "front/style.css",
 					"settings":
 					{
-						"buffer_size": 33815,
+						"buffer_size": 34507,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								13301,
-								13301
+								16856,
+								16862
 							]
 						],
 						"settings":
@@ -1027,180 +1124,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3856.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "front/page_contenedorseco.html",
-					"settings":
-					{
-						"buffer_size": 21226,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1201,
-								1201
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "front/page_cotizacion.html",
-					"settings":
-					{
-						"buffer_size": 14045,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1201,
-								1201
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "front/page_contenedorespecial.html",
-					"settings":
-					{
-						"buffer_size": 31647,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1201,
-								1201
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"settings":
-					{
-						"buffer_size": 3296,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1,
-								3292
-							]
-						],
-						"settings":
-						{
-							"auto_name": "function initMap() {",
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 914.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "front/page_modulos.html",
-					"settings":
-					{
-						"buffer_size": 17515,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1201,
-								1201
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "front/page_contenedorrefrigerado.html",
-					"settings":
-					{
-						"buffer_size": 23008,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								518,
-								518
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2197.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
