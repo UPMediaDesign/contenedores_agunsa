@@ -18,7 +18,8 @@
 <link rel="stylesheet" href="style.css?ver=3.8.1" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.css" />
-<link href="https://fonts.googleapis.com/css?family=Exo+2:100,300,300i,400,400i,500,600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500" rel="stylesheet">
 
 <!-- Otros -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js?ver=4.5.3"></script>
@@ -70,9 +71,7 @@ jQuery(document).ready(function(){
 
 });
   
-</script>
 
-<script>
 jQuery(document).ready(function(){
     $("#hide").click(function(){
         $(".approved").removeClass("appear");
@@ -81,17 +80,59 @@ jQuery(document).ready(function(){
         $(".approved").addClass("appear");
     });
 });
-</script>
 
-<script>
-jQuery(document).ready(function() {
-    $('#optionsRadios2').change(function() {
-        if ($(this).prop('checked')) {
-            $(".alert").addClass("appear"); //checked
-        }
-        
+jQuery(document).ready(function(){
+  $("#optionsRadios1").click(function(){
+        $(".alert").removeClass("appear");
+    });
+    $("#optionsRadios2").click(function(){
+        $(".alert").addClass("appear");
     });
 });
+
+jQuery(document).ready(function(){
+  $("#optionsRadios1").click(function(){
+        $(".arriendo").addClass("appear");
+    });
+    $("#optionsRadios2").click(function(){
+        $(".arriendo").removeClass("appear");
+    });
+});
+
+jQuery(document).ready(function(){
+  var pageX, pageY;
+
+    $(document).mousemove(
+        function(e){
+            pageX = e.pageX;
+            pageY = e.pageY;
+        });
+
+    $('.tooltipped li[title]').hover(
+        function(){
+            var tip = $('<div />')
+                .addClass('tooltip')
+                .text($(this).attr('title'))
+                .css({
+                    'position' : 'absolute',
+                    'top' : pageY,
+                    'left' : pageX
+                });
+            $(tip).appendTo($(this));
+            $(this).mousemove(
+                function(){
+                    $('.tooltip').css(
+                        {
+                            'top' : pageY,
+                            'left' : pageX
+                        });
+                });
+        },
+        function(){
+            $('.tooltip').remove();
+    });
+});
+  
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -100,7 +141,16 @@ jQuery(document).ready(function() {
 
 <body class="contenedor">
 
-<nav class="navbar navbar-fixed-top insider-nav contenedor" role="navigation">
+<!-- Push navigation -->
+<div class="pull-right" style="z-index:999;">
+  <a id="nav-expander" class="nav-expander fixed">
+    <span class="fa fa-times" aria-hidden="true"></span>
+    <span class="fa fa-bars" aria-hidden="true"></span>
+  </a>
+</div>
+<!-- Fin Push Navigation -->
+
+<nav class="navbar navbar-fixed-top insider-nav country" role="navigation">
   <div class="container">
         <div class="row">
 
@@ -113,15 +163,6 @@ jQuery(document).ready(function() {
   </div>
 </nav>
 
-<!-- Push navigation -->
-<div class="pull-right">
-  <a id="nav-expander" class="nav-expander fixed">
-    <span class="fa fa-times" aria-hidden="true"></span>
-    <span class="fa fa-bars" aria-hidden="true"></span>
-  </a>
-</div>
-<!-- Fin Push Navigation -->
-
 <nav class="push-nav">
 
   <ul id="menu-menu-principal-1" class="list-unstyled main-menu">
@@ -133,8 +174,14 @@ jQuery(document).ready(function() {
     <li class="menu-item"><a href="page_modulos.html">Proyectos Modulares</a></li>
     <li class="menu-item"><a href="page_cotizacion.html">Cotización</a></li>
     <li class="menu-item"><a href="page_quienessomos.html">Acerca de</a></li>
-    <li class="menu-item"><a href="page_ubicacion">Ubicación</a></li>
   </ul>
+  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
+  <ul id="menu-menu-principal-2" class="list-unstyled main-menu">
+    <li class="cl"><a href="home_chile.html">Chile</a></li>
+    <li class="pr"><a href="/">Perú</a></li>
+    <li class="mx"><a href="/">México</a></li>
+  </ul>
+  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
 
 </nav>
 
@@ -201,15 +248,15 @@ jQuery(document).ready(function() {
         <div class="col-md-12 add-ingress">
           <span>1</span><p>Ingresa tus Datos Personales</p>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-4 col-sm-4">
             <label for="InputName">Nombre</label>
             <input type="name" class="form-control" id="InputName" placeholder="Nombre">
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-4 col-sm-4">
             <label for="InputEmail">Email</label>
             <input type="email" class="form-control" id="InputMail" placeholder="Email">
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-4 col-sm-4">
             <label for="InputEmpresa">Empresa</label>
             <input type="text" class="form-control" id="InputEmpresa" placeholder="Empresa">
         </div>
@@ -219,7 +266,7 @@ jQuery(document).ready(function() {
         <div class="col-md-12 add-ingress">
           <span>2</span><p>Seleccione su container</p>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-4 col-sm-4">
           <label>Tamaño</label>
             <select class="form-control">
               <option>--</option>
@@ -227,7 +274,7 @@ jQuery(document).ready(function() {
               <option>40 Pies</option>
           </select>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-4 col-sm-4">
           <label>Condición</label>
             <select class="form-control">
               <option>--</option>
@@ -235,7 +282,7 @@ jQuery(document).ready(function() {
               <option>Usado</option>
           </select>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-4 col-sm-4">
           <label>Tipo</label>
             <select class="form-control">
               <option>--</option>
@@ -246,8 +293,8 @@ jQuery(document).ready(function() {
           </select>
         </div>
 
-        <div class="col-md-12">
-          <h3>¿Requiere Despacho?</h3>
+        <div class="col-md-12 add-ingress">
+          <span>3</span><p>¿Requiere Despacho?</p>
         </div>
         <div class="col-xs-6 ">
             <div class="radio">
@@ -275,12 +322,13 @@ jQuery(document).ready(function() {
 
         <div class="clear separator" style="border-top: 1px solid #414141; width: 97%; margin: 0px auto; display: block; float: none;"></div>
         <div class="form-group col-md-6 col-sm-6 col-xs-12">         
-          <label>Seleccione su tiempo de arriendo</label>
-          <input id="ex6" type="text" class="col-xs-12" data-slider-min="1" data-slider-max="24" data-slider-step="1" data-slider-value="1"/>
-          <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Mes</span></span>
-       
-          <div class="clear separator"></div>
-          <div class="clear separator" style="border-top: 1px solid #414141; width: 97%; margin: 0px auto; display: block; float: none;"></div>
+          <div class="arriendo">
+            <label>Seleccione su tiempo de arriendo</label>
+            <input id="ex6" type="text" class="col-xs-12" data-slider-min="1" data-slider-max="24" data-slider-step="1" data-slider-value="1"/>
+            <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Mes</span></span>
+            <div class="clear separator"></div>
+            <div class="clear separator" style="border-top: 1px solid #414141; width: 97%; margin: 0px auto; display: block; float: none;"></div>
+          </div>
 
           <div id="more-products">
             <p>Puede revisar nuestro catálogo y seleccionar otros productos a continuación</p>

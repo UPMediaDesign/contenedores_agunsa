@@ -18,7 +18,8 @@
 <link rel="stylesheet" href="style.css?ver=3.8.1" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.css" />
-<link href="https://fonts.googleapis.com/css?family=Exo+2:100,300,300i,400,400i,500,600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500" rel="stylesheet">
 
 <!-- Otros -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js?ver=4.5.3"></script>
@@ -81,17 +82,59 @@ jQuery(document).ready(function(){
         $(".approved").addClass("appear");
     });
 });
-</script>
 
-<script>
-  jQuery(document).ready(function() {
-    $('#optionsRadios2').change(function() {
-        if ($(this).prop('checked')) {
-            $(".alert").addClass("appear"); //checked
-        }
-        
+jQuery(document).ready(function(){
+  $("#optionsRadios1").click(function(){
+        $(".alert").removeClass("appear");
+    });
+    $("#optionsRadios2").click(function(){
+        $(".alert").addClass("appear");
     });
 });
+
+jQuery(document).ready(function(){
+  $("#optionsRadios1").click(function(){
+        $(".arriendo").addClass("appear");
+    });
+    $("#optionsRadios2").click(function(){
+        $(".arriendo").removeClass("appear");
+    });
+});
+
+jQuery(document).ready(function(){
+  var pageX, pageY;
+
+    $(document).mousemove(
+        function(e){
+            pageX = e.pageX;
+            pageY = e.pageY;
+        });
+
+    $('.tooltipped li[title]').hover(
+        function(){
+            var tip = $('<div />')
+                .addClass('tooltip')
+                .text($(this).attr('title'))
+                .css({
+                    'position' : 'absolute',
+                    'top' : pageY,
+                    'left' : pageX
+                });
+            $(tip).appendTo($(this));
+            $(this).mousemove(
+                function(){
+                    $('.tooltip').css(
+                        {
+                            'top' : pageY,
+                            'left' : pageX
+                        });
+                });
+        },
+        function(){
+            $('.tooltip').remove();
+    });
+});
+  
 </script>
 
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -100,7 +143,16 @@ jQuery(document).ready(function(){
 
 <body class="contenedor">
 
-<nav class="navbar navbar-fixed-top insider-nav contenedor" role="navigation">
+<!-- Push navigation -->
+<div class="pull-right" style="z-index:999;">
+  <a id="nav-expander" class="nav-expander fixed">
+    <span class="fa fa-times" aria-hidden="true"></span>
+    <span class="fa fa-bars" aria-hidden="true"></span>
+  </a>
+</div>
+<!-- Fin Push Navigation -->
+
+<nav class="navbar navbar-fixed-top insider-nav country" role="navigation">
   <div class="container">
         <div class="row">
 
@@ -113,30 +165,28 @@ jQuery(document).ready(function(){
   </div>
 </nav>
 
-<!-- Push navigation -->
-<div class="pull-right">
-  <a id="nav-expander" class="nav-expander fixed" href="http://www.agunsacontenedores.upmedia.cl">
-    <span class="fa fa-times" aria-hidden="true"></span>
-    <span class="fa fa-bars" aria-hidden="true"></span>
-  </a>
-</div>
-<!-- Fin Push Navigation -->
-
 <nav class="push-nav">
 
   <ul id="menu-menu-principal-1" class="list-unstyled main-menu">
-    <li class="menu-item "><a href="page_ventacontenedor.html">Venta Contenedores</a></li>
-    <li class="menu-item "><a href="page_arriendocontenedor.html">Arriendo Contenedores</a></li>
-    <li class="menu-item "><a href="page_contenedorseco.html">Contenedores Secos</a></li>
-    <li class="menu-item "><a href="page_contenedorrefrigerado.html">Contenedores Refrigerados</a></li>
-    <li class="menu-item "><a href="page_contenedorespecial.html">Contenedores Especiales</a></li>
-    <li class="menu-item "><a href="page_modulos.html">Proyectos Modulares</a></li>
-    <li class="menu-item "><a href="page_cotizacion.html">Cotización</a></li>
-    <li class="menu-item "><a href="page_quienessomos.html">Acerca de</a></li>
-    <li class="menu-item "><a href="page_ubicacion">Ubicación</a></li>
+    <li class="menu-item"><a href="page_ventacontenedor.html">Venta Contenedores</a></li>
+    <li class="menu-item"><a href="page_arriendocontenedor.html">Arriendo Contenedores</a></li>
+    <li class="menu-item"><a href="page_contenedorseco.html">Contenedores Secos</a></li>
+    <li class="menu-item"><a href="page_contenedorrefrigerado.html">Contenedores Refrigerados</a></li>
+    <li class="menu-item"><a href="page_contenedorespecial.html">Contenedores Especiales</a></li>
+    <li class="menu-item"><a href="page_modulos.html">Proyectos Modulares</a></li>
+    <li class="menu-item"><a href="page_cotizacion.html">Cotización</a></li>
+    <li class="menu-item"><a href="page_quienessomos.html">Acerca de</a></li>
   </ul>
+  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
+  <ul id="menu-menu-principal-2" class="list-unstyled main-menu">
+    <li class="cl"><a href="home_chile.html">Chile</a></li>
+    <li class="pr"><a href="/">Perú</a></li>
+    <li class="mx"><a href="/">México</a></li>
+  </ul>
+  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
 
 </nav>
+
 <section class="pre-heading" style="background:url(images/cont_view.jpg);">
   <div class="container">
     <div class="row">
@@ -179,7 +229,7 @@ jQuery(document).ready(function(){
     <div class="row">
       
        <!-- Nav tabs -->
-      <ul class="nav nav-tabs col-md-4 col-esp" role="tablist">
+      <ul class="nav nav-tabs col-md-4 col-esp" role="tablist" style="border-right: 1px solid #d2d2d2;">
         <li role="presentation" class="active col-md-12 col-sm-12 col-xs-12 col-esp"><a href="#opentop" aria-controls="opentop" role="tab" data-toggle="tab">Open Top 20’/40’</a></li>
         <li role="presentation" class="col-md-6 col-sm-6 col-xs-6 col-esp"><a href="#palletwide" aria-controls="palletwide" role="tab" data-toggle="tab">Pallet Wide 40’</a></li>
         <li role="presentation" class="col-md-6 col-sm-6 col-xs-6 col-esp"><a href="#isotank" aria-controls="isotank" role="tab" data-toggle="tab">Isotank 20’</a></li>
@@ -200,24 +250,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -232,24 +282,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Nunc mollis tellus et hendrerit consequat. Nam scelerisque luctus laoreet. Pellentesque non consequat sem, eu faucibus nulla. .</p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -264,24 +314,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -296,24 +346,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Nunc mollis tellus et hendrerit consequat. Nam scelerisque luctus laoreet. Pellentesque non consequat sem, eu faucibus nulla. </p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -328,24 +378,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -360,24 +410,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Nunc mollis tellus et hendrerit consequat. Nam scelerisque luctus laoreet. Pellentesque non consequat sem, eu faucibus nulla. </p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -392,24 +442,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -424,24 +474,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Nunc mollis tellus et hendrerit consequat. Nam scelerisque luctus laoreet. Pellentesque non consequat sem, eu faucibus nulla. </p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -456,24 +506,24 @@ jQuery(document).ready(function(){
             <img class="img-responsive" src="images/cont_especial.jpg" alt="" />
             <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum </p>
             <p>Cras eget quam dignissim, euismod leo id, mollis magna. Nulla eu blandit mi, eget tempus lacus. Praesent nec quam egestas, sollicitudin lorem pulvinar.</p>
-            <ul>
-              <li>
-                <img src="images/clock-icon.png" class="img-responsive"  alt="" />
+            <ul class="tooltiped">
+              <li title="Resistentes a la humedad y el frío">
+                <img src="images/shield-icon.png" class="img-responsive"  alt="" />
                 <span>Resistentes</span>
               </li>
-              <li>
+              <li title="Estructuras Apilables a sus necesidades">
                 <img src="images/lego-icon.png" class="img-responsive" alt="" />
                 <span>Apilables</span>
               </li>
-              <li>
+              <li title="Con facilidades de transporte por vías aerea, terrestre y marítima">
                 <img src="images/transport-icon.png" class="img-responsive" alt="" />
                 <span>Transportables</span>
               </li>
-              <li>
+              <li title="Sellados para conservar tus productos a toda prueba">
                 <img src="images/drop-icon.png" class="img-responsive"  alt="" />
                 <span>Herméticos</span>
               </li>
-              <li>
+              <li title="Medidas a selección de tus necesidades">
                 <img src="images/tablesize-icon.png" class="img-responsive"  alt="" />
                 <span>Medidas Internas y Externas</span>
               </li>
@@ -520,19 +570,26 @@ jQuery(document).ready(function(){
           </div>
         </div>
 
-        <div class="form-group col-md-3 col-sm-3">
+        <div class="col-md-12 add-ingress">
+          <span>1</span><p>Ingresa tus Datos Personales</p>
+        </div>
+        <div class="form-group col-md-4 col-sm-4">
             <label for="InputName">Nombre</label>
             <input type="name" class="form-control" id="InputName" placeholder="Nombre">
         </div>
-        <div class="form-group col-md-3 col-sm-3">
+        <div class="form-group col-md-4 col-sm-4">
             <label for="InputEmail">Email</label>
             <input type="email" class="form-control" id="InputMail" placeholder="Email">
         </div>
-        <div class="form-group col-md-3 col-sm-3">
+        <div class="form-group col-md-4 col-sm-4">
             <label for="InputEmpresa">Empresa</label>
             <input type="text" class="form-control" id="InputEmpresa" placeholder="Empresa">
         </div>
-        <div class="form-group col-md-3 col-sm-3">
+
+        <div class="col-md-12 add-ingress">
+          <span>2</span><p>Seleccione su container</p>
+        </div>
+        <div class="form-group col-md-4 col-sm-4">
           <label>Tipo</label>
             <select class="form-control">
               <option>--</option>
@@ -542,7 +599,7 @@ jQuery(document).ready(function(){
               <option>Modular</option>
           </select>
         </div>
-        <div class="form-group col-md-3 col-sm-3">
+        <div class="form-group col-md-4 col-sm-4">
           <label>Tamaño</label>
             <select class="form-control">
               <option>--</option>
@@ -550,7 +607,7 @@ jQuery(document).ready(function(){
               <option>40 Pies</option>
           </select>
         </div>
-        <div class="form-group col-md-3 col-sm-3">
+        <div class="form-group col-md-4 col-sm-4">
           <label>Condición</label>
             <select class="form-control">
               <option>--</option>
@@ -559,14 +616,14 @@ jQuery(document).ready(function(){
           </select>
         </div>
 
-        <div class="form-group col-md-6 col-sm-6">
+        <div class="form-group col-md-6 col-sm-6 arriendo">
           <label>Seleccione su tiempo de arriendo</label>
           <input id="ex6" type="text" class="col-xs-12" data-slider-min="1" data-slider-max="24" data-slider-step="1" data-slider-value="1"/>
           <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Mes</span></span>
         </div>
 
-        <div class="col-md-12">
-          <h3>¿Requiere Despacho?</h3>
+        <div class="col-md-12 add-ingress">
+          <span>3</span><p>¿Requiere Despacho?</p>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="radio">

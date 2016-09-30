@@ -18,7 +18,9 @@
 <link rel="stylesheet" href="style.css?ver=3.8.1" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.css" />
-<link href="https://fonts.googleapis.com/css?family=Exo+2:100,300,300i,400,400i,500,600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500" rel="stylesheet">
+
 
 <!-- Otros -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js?ver=4.5.3"></script>
@@ -102,19 +104,35 @@ jQuery(document).ready(function() {
     });
 
     function initialize() {
-        var styles = [{
-            stylers: [{
-                saturation: -100
-            }]
-        }];
+        var styles = [
+              {
+                stylers: [
+                  { hue: "#e21717" },
+                  { saturation: -20 }
+                ]
+              },{
+                featureType: "road",
+                elementType: "geometry",
+                stylers: [
+                  { lightness: 100 },
+                  { visibility: "simplified" }
+                ]
+              },{
+                featureType: "road",
+                elementType: "labels",
+                stylers: [
+                  { visibility: "off" }
+                ]
+              }
+            ];
         var styledMap = new google.maps.StyledMapType(styles, {
             name: "Styled Map"
         });
         var mapProp = {
             center: new google.maps.LatLng(-33.441624, -70.667083),
             zoom: 17,
-            panControl: false,
-            zoomControl: false,
+            panControl: true,
+            zoomControl: true,
             mapTypeControl: false,
             scaleControl: true,
             streetViewControl: false,
@@ -155,7 +173,16 @@ jQuery(document).ready(function() {
 
 <body class="contenedor">
 
-<nav class="navbar navbar-fixed-top insider-nav contenedor" role="navigation">
+<!-- Push navigation -->
+<div class="pull-right" style="z-index:999;">
+  <a id="nav-expander" class="nav-expander fixed">
+    <span class="fa fa-times" aria-hidden="true"></span>
+    <span class="fa fa-bars" aria-hidden="true"></span>
+  </a>
+</div>
+<!-- Fin Push Navigation -->
+
+<nav class="navbar navbar-fixed-top insider-nav country" role="navigation">
   <div class="container">
         <div class="row">
 
@@ -168,15 +195,6 @@ jQuery(document).ready(function() {
   </div>
 </nav>
 
-<!-- Push navigation -->
-<div class="pull-right">
-  <a id="nav-expander" class="nav-expander fixed">
-    <span class="fa fa-times" aria-hidden="true"></span>
-    <span class="fa fa-bars" aria-hidden="true"></span>
-  </a>
-</div>
-<!-- Fin Push Navigation -->
-
 <nav class="push-nav">
 
   <ul id="menu-menu-principal-1" class="list-unstyled main-menu">
@@ -188,8 +206,14 @@ jQuery(document).ready(function() {
     <li class="menu-item"><a href="page_modulos.html">Proyectos Modulares</a></li>
     <li class="menu-item"><a href="page_cotizacion.html">Cotización</a></li>
     <li class="menu-item"><a href="page_quienessomos.html">Acerca de</a></li>
-    <li class="menu-item"><a href="page_ubicacion">Ubicación</a></li>
   </ul>
+  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
+  <ul id="menu-menu-principal-2" class="list-unstyled main-menu">
+    <li class="cl"><a href="home_chile.html">Chile</a></li>
+    <li class="pr"><a href="/">Perú</a></li>
+    <li class="mx"><a href="/ml">México</a></li>
+  </ul>
+  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
 
 </nav>
 
@@ -247,7 +271,7 @@ jQuery(document).ready(function() {
     <div class="row">
 
           <div class="col-sm-12 col-esp">
-            <div id="map_canvas" style="height:250px;"></div>
+            <div id="map_canvas" style="height:350px;"></div>
           </div>
 
           <div class="col-sm-8 col-sm-offset-2">

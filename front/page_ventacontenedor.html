@@ -18,7 +18,8 @@
 <link rel="stylesheet" href="style.css?ver=3.8.1" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.css" />
-<link href="https://fonts.googleapis.com/css?family=Exo+2:100,300,300i,400,400i,500,600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500" rel="stylesheet">
 
 <!-- Otros -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js?ver=4.5.3"></script>
@@ -84,7 +85,16 @@ jQuery(document).ready(function() {
 
 <body class="contenedor">
 
-<nav class="navbar navbar-fixed-top insider-nav contenedor" role="navigation">
+<!-- Push navigation -->
+<div class="pull-right" style="z-index:999;">
+  <a id="nav-expander" class="nav-expander fixed">
+    <span class="fa fa-times" aria-hidden="true"></span>
+    <span class="fa fa-bars" aria-hidden="true"></span>
+  </a>
+</div>
+<!-- Fin Push Navigation -->
+
+<nav class="navbar navbar-fixed-top insider-nav country" role="navigation">
   <div class="container">
         <div class="row">
 
@@ -97,15 +107,6 @@ jQuery(document).ready(function() {
   </div>
 </nav>
 
-<!-- Push navigation -->
-<div class="pull-right">
-  <a id="nav-expander" class="nav-expander fixed">
-    <span class="fa fa-times" aria-hidden="true"></span>
-    <span class="fa fa-bars" aria-hidden="true"></span>
-  </a>
-</div>
-<!-- Fin Push Navigation -->
-
 <nav class="push-nav">
 
   <ul id="menu-menu-principal-1" class="list-unstyled main-menu">
@@ -117,8 +118,14 @@ jQuery(document).ready(function() {
     <li class="menu-item"><a href="page_modulos.html">Proyectos Modulares</a></li>
     <li class="menu-item"><a href="page_cotizacion.html">Cotización</a></li>
     <li class="menu-item"><a href="page_quienessomos.html">Acerca de</a></li>
-    <li class="menu-item"><a href="page_ubicacion">Ubicación</a></li>
   </ul>
+  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
+  <ul id="menu-menu-principal-2" class="list-unstyled main-menu">
+    <li class="cl"><a href="home_chile.html">Chile</a></li>
+    <li class="pr"><a href="/">Perú</a></li>
+    <li class="mx"><a href="/">México</a></li>
+  </ul>
+  <div class="clear miniseparator liner" style="border-top:1px solid #fff;"></div>
 
 </nav>
 
@@ -198,40 +205,6 @@ jQuery(document).ready(function() {
             </div>
           </div>
           <!-- Fin Slide -->
-          <!-- Tab content -->
-
-
-<!--           <div class="tab-content ">
-              <div role="tabpanel" class="tab-pane active" id="instalacion">
-
-                <div class="area">
-                  <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum.</p>
-
-                  <p>Maecenas pellentesque suscipit orci sed dictum. Curabitur ac sodales dui, a aliquet ipsum. Etiam sem nibh, lobortis a aliquet ut, aliquet sed quam. Quisque consequat velit dignissim eros interdum congue. Phasellus porttitor odio eget erat bibendum, ultricies condimentum lorem consectetur. </p>
-                </div>
-              </div>
-
-              <div role="tabpanel" class="tab-pane" id="cotizar">
-                  <div class="area">
-                  <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum.</p>
-
-                  <p>Praesent faucibus metus ac condimentum elementum. Donec sit amet felis congue, ornare ipsum at, ultricies tortor. Morbi nisi nulla, iaculis ut sagittis id, egestas ut enim. </p>
-                </div>
-              </div>
-
-              <div role="tabpanel" class="tab-pane" id="oferta">
-                <div class="area">
-                  <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus, morbi condimentum.</p>
-
-                  <p>Aenean mollis, magna quis fermentum rhoncus, ante arcu aliquam diam, non sodales urna ante sit amet orci. Proin posuere viverra odio, ac ornare tellus porttitor sit amet. Morbi tempor in elit non fermentum. Integer fermentum diam bibendum vestibulum dapibus. Cras aliquet lacus nec lacus tincidunt, a dictum turpis pretium.</p>
-                </div>
-              </div>
-
-            </div>
-
-        </div> -->
-
-        <!-- Fin tab content -->
       </div>
 
 
@@ -246,16 +219,13 @@ jQuery(document).ready(function() {
       <h3>Tipos de contenedores para venta y arriendo</h3>
         <ul class="container-type col-xs-12 col-esp">
           <li class="col-md-4 col-sm-4 col-xs-6 ">
-            <img src="images/icon_containerseco.png" alt=""/>
-            <a href="/">CONTENEDORES SECOS</a>
+            <a href="page_contenedoressecos.html"><img src="images/icon_containerseco.png" alt=""/>CONTENEDORES SECOS</a>
           </li>
           <li class="col-md-4 col-sm-4 col-xs-6">
-            <img src="images/icon_containerseco.png" alt=""/>
-            <a href="/">CONTENEDORES REFRIGERADOS</a>
+            <a href="page_contenedoresrefrigerados.html"><img src="images/icon_containerseco.png" alt=""/>CONTENEDORES REFRIGERADOS</a>
           </li>
           <li class="col-md-4 col-sm-4 col-xs-6">
-            <img src="images/icon_containerseco.png" alt=""/>
-            <a href="/">CONTENEDORES ESPECIALES</a>
+            <a href="page_contenedoresespeciales.html"><img src="images/icon_containerseco.png" alt=""/>CONTENEDORES ESPECIALES</a>
           </li>
         </ul>
 
@@ -263,99 +233,6 @@ jQuery(document).ready(function() {
   </div>
 </section>
 <!-- Fin Pestañas Venta Contenedores -->
-
-<!-- <section class="buy-form quote">
-  <div class="container">
-    <div class="row area">
-
-      <form class="col-md-12 buy-form">
-        <div class="col-md-12">
-          <h3>Envíanos tu cotización</h3>
-        </div>
-        <div class="form-group col-md-12">
-            <div class="radio col-xs-6 ">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked> Arriendo
-              </label>
-          </div>
-          <div class="radio col-xs-6 ">
-              <label>
-                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Compra
-              </label>
-          </div>
-        </div>
-
-        <div class="col-md-12 add-ingress">
-          <span>1</span><p>Ingresa tus Datos Personales</p>
-        </div>
-        <div class="form-group col-md-4">
-            <label for="InputName">Nombre</label>
-            <input type="name" class="form-control" id="InputName" placeholder="Nombre">
-        </div>
-        <div class="form-group col-md-4">
-            <label for="InputEmail">Email</label>
-            <input type="email" class="form-control" id="InputMail" placeholder="Email">
-        </div>
-        <div class="form-group col-md-4">
-            <label for="InputEmpresa">Empresa</label>
-            <input type="text" class="form-control" id="InputEmpresa" placeholder="Empresa">
-        </div>
-        <div class="col-xs-12 clear separator" style="border-top:1px solid #414141;"></div>
-
-        <div class="col-md-12 add-ingress">
-          <span>2</span><p>Seleccione su container</p>
-        </div>
-        <div class="form-group col-md-4">
-          <label>Tamaño</label>
-            <select class="form-control">
-              <option>--</option>
-              <option>20 Pies</option>
-              <option>40 Pies</option>
-          </select>
-        </div>
-        <div class="form-group col-md-4">
-          <label>Condición</label>
-            <select class="form-control">
-              <option>--</option>
-              <option>Nuevo</option>
-              <option>Usado</option>
-          </select>
-        </div>
-        <div class="form-group col-md-4">
-          <label>Tipo</label>
-            <select class="form-control">
-              <option>--</option>
-              <option>Seco</option>
-              <option>Refrigerado</option>
-              <option>Especial</option>
-              <option>Modular</option>
-          </select>
-        </div>
-        <div class="form-group col-md-12">
-          <label>Seleccione su tiempo de arriendo</label>
-          <input id="ex6" type="text" class="col-xs-12" data-slider-min="1" data-slider-max="24" data-slider-step="1" data-slider-value="1"/>
-          <span id="ex6CurrentSliderValLabel"><span id="ex6SliderVal">1 Semana</span></span>
-        </div>
-        <div class="col-xs-12 clear separator" style="border-top:1px solid #414141;"></div>
-
-        <div class="col-md-12" id="more-products">
-          <p>Puede revisar nuestro catálogo y seleccionar otros productos a continuación</p>
-          <button class="add-product"><span>+</span> Agregar más Productos</button>
-        </div>
-        <div class="form-group col-md-12">
-          <label>Mensaje</label>
-          <textarea class="form-control" rows="3"></textarea>
-          <div class="clear miniseparator"></div>
-          <div class="g-recaptcha" data-sitekey="6LcKyikTAAAAAAnhO53CuhtucI6Ag3CygfA_H5MP"></div>
-          <div class="clear miniseparator"></div>
-          <button type="submit" class="btn btn-default cta">Enviar Cotización</button>
-        </div>
-
-      </form>
-
-    </div>
-  </div>
-</section> -->
 
 <div class="callus">
   <div class="container">
